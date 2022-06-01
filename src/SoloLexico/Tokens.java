@@ -8,6 +8,7 @@ public enum Tokens {
     Case,
     Coma,
     Comillas,
+    ComparadorIgual,
     Const,
     Continue,
     Corchete_a,
@@ -15,13 +16,16 @@ public enum Tokens {
     
     Default,
     Define,
+    Diferente,
     Division,
+    DivisionIgual,
     Do,
     Doble,
     
     Else,
     ERROR,
     
+    False,
     For,
     
     Identificador,
@@ -36,7 +40,14 @@ public enum Tokens {
     Long,
     
     Main,
+    MasIgual,
+    MenosIgual,
+    MayorQue,
+    MenorQue,
+    MayorIgual,
+    MenorIgual,
     Multiplicacion,
+    MultiplicacionIgual,
     
     Numero,
     Numeral,
@@ -48,6 +59,8 @@ public enum Tokens {
     
     Resta,
     Return,
+    
+    True,
     
     Suma  
 }

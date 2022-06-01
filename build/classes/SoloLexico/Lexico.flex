@@ -11,6 +11,9 @@ espacio=[ \t \r]+
 %}
 %%
 
+/* Espacios en blanco */
+{espacio} {/*Ignore*/}
+
 /* Marcador break*/
 ( "break" ) {lexemas=yytext(); return Break;}
 
@@ -56,23 +59,56 @@ espacio=[ \t \r]+
 /* Marcador Else*/
 ( "else" ) {lexemas=yytext(); return Else;}
 
-/* Espacios en blanco */
-{espacio} {/*Ignore*/}
-
 /* Ciclo repetitivo for */
 ( "for" ) {lexemas=yytext(); return For;}
 
 /* Condicional if */
 ( "if" ) {lexemas=yytext(); return If;}
 
+/* Comparador Mayor igual*/
+( ">=" ) {lexemas=yytext(); return MayorIgual;}
+
+/* Comparador Menor igual*/
+( "<=" ) {lexemas=yytext(); return MenorIgual;}
+
+/* Operador Más igual*/
+( "+=" ) {lexemas=yytext(); return MasIgual;}
+
+/* Operador Menos igual*/
+( "-=" ) {lexemas=yytext(); return MenosIgual;}
+
+/* Operador Multiplica igual*/
+( "*=" ) {lexemas=yytext(); return MultiplicacionIgual;}
+
+/* Operador Division igual*/
+( "/=" ) {lexemas=yytext(); return DivisionIgual;}
+
+/* Operador Comparador igual*/
+( "==" ) {lexemas=yytext(); return ComparadorIgual;}
+
+/* Operador Diferente */
+( "!=" ) {lexemas=yytext(); return Diferente;}
+
 /* Operador Igual */
 ( "=" ) {lexemas=yytext(); return Igual;}
+
+/* Operador Mayor que */
+( ">" ) {lexemas=yytext(); return MayorQue;}
+
+/* Operador Menor que */
+( "<" ) {lexemas=yytext(); return MenorQue;}
 
 /* Integer */
 (int) {lexemas=yytext(); return Int;}
 
 /* Marcador include */
 ( "include" ) {lexemas=yytext(); return Include;}
+
+/* Marcador false*/
+( "false" ) {lexemas=yytext(); return False;}
+
+/* Marcador true*/
+( "true" ) {lexemas=yytext(); return True;}
 
 /* Salto de linea */
 ( "\n" ) {return Linea;}
@@ -120,7 +156,7 @@ espacio=[ \t \r]+
 {L}({L}|{D})* {lexemas=yytext(); return Identificador;}
 
 /* Numero */
-/*("-("{D}+")") | ("-("{D}+.{D}+")") | -({D})+ | {D}+ | {D}+.{D}+ | -{D}+.{D}+ {lexemas=yytext(); return Numero;}*/
+("-("{D}+")") | ("-("{D}+.{D}+")") | -({D})+ | {D}+ | {D}+.{D}+ | -{D}+.{D}+ {lexemas=yytext(); return Numero;}
 
 /* Error de analisis */
  . {return ERROR;}

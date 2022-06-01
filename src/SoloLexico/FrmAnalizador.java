@@ -129,7 +129,9 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 return;
             }
             switch (token) {
-                
+                case Numero:
+                    resultado += "  <Numero>\t\t" + lexicos.lexemas + "\n";
+                    break;
                 case Break:
                     resultado += "  <Reservada break>\t" + lexicos.lexemas + "\n";
                     break;
@@ -138,7 +140,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Case:
                     resultado += "  <Reservado case>\t" + lexicos.lexemas + "\n";
-                    break; 
+                    break;
                 case Coma:
                     resultado += "  <Coma>\t\t" + lexicos.lexemas + "\n";
                 case Comillas:
@@ -146,7 +148,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Const:
                     resultado += "  <Marcador const>\t" + lexicos.lexemas + "\n";
-                    break;   
+                    break;
                 case Continue:
                     resultado += "  <Reservado continue>\t" + lexicos.lexemas + "\n";
                     break;
@@ -161,22 +163,27 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Define:
                     resultado += "  <Reservada define>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Division:
                     resultado += "  <Operador division>\t" + lexicos.lexemas + "\n";
                     break;
                 case Do:
                     resultado += "  <Reservado do>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Else:
                     resultado += "  <Condisional else>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case For:
                     resultado += "  <Ciclo for>\t" + lexicos.lexemas + "\n";
-                    break;    
-                
+                    break;
                 case If:
                     resultado += "  <Condisional if>\t" + lexicos.lexemas + "\n";
+                    break;
+                case ComparadorIgual:
+                    resultado += "  <Comparador igual>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Diferente:
+                    resultado += "  <Comparador diferente>\t" + lexicos.lexemas + "\n";
                     break;
                 case Igual:
                     resultado += "  <Operador igual>\t" + lexicos.lexemas + "\n";
@@ -192,9 +199,39 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Llave_c:
                     resultado += "  <Llave de cierre>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Main:
                     resultado += "  <Reservada main>\t" + lexicos.lexemas + "\n";
+                    break;
+                case False:
+                    resultado += "  <Reservada false>\t" + lexicos.lexemas + "\n";
+                    break;
+                case True:
+                    resultado += "  <Reservada true>\t" + lexicos.lexemas + "\n";
+                    break;
+                case MayorQue:
+                    resultado += "  <Simbolo Mayor que>\t" + lexicos.lexemas + "\n";
+                    break;
+                case MenorQue:
+                    resultado += "  <Simbolo Menor que>\t" + lexicos.lexemas + "\n";
+                    break;
+                case MayorIgual:
+                    resultado += "  <Mayor igual>\t\t" + lexicos.lexemas + "\n";
+                    break;
+                case MenorIgual:
+                    resultado += "  <Menor igual>\t\t" + lexicos.lexemas + "\n";
+                    break;
+                case MasIgual:
+                    resultado += "  <Mas igual>\t\t" + lexicos.lexemas + "\n";
+                    break;
+                case MenosIgual:
+                    resultado += "  <Menos igual>\t\t" + lexicos.lexemas + "\n";
+                    break;    
+                case MultiplicacionIgual:
+                    resultado += "  <Multiplica igual>\t" + lexicos.lexemas + "\n";
+                    break;    
+                case DivisionIgual:
+                    resultado += "  <Division igual>\t" + lexicos.lexemas + "\n";
                     break;
                 case Multiplicacion:
                     resultado += "  <Operador multiplicacion>\t" + lexicos.lexemas + "\n";
@@ -207,7 +244,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Parent_c:
                     resultado += "  <Parentesis de cierre>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case P_coma:
                     resultado += "  <Punto y coma>\t" + lexicos.lexemas + "\n";
                     break;
@@ -216,13 +253,13 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Resta:
                     resultado += "  <Operador resta>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Return:
                     resultado += "  <Reservada return>\t" + lexicos.lexemas + "\n";
                     break;
                 case Suma:
                     resultado += "  <Operador suma>\t" + lexicos.lexemas + "\n";
-                    break; 
+                    break;
                 case Linea:
                     cont++;
                     resultado += "LINEA " + cont + "\n";
@@ -230,17 +267,13 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 case Identificador:
                     resultado += "  <Identificador>\t\t" + lexicos.lexemas + "\n";
                     break;
-                case Numero:
-                    resultado += "  <Numero>\t\t" + lexicos.lexemas + "\n";
-                    break;
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
-                    break;   
+                    break;
                 default:
                     resultado += "  < " + lexicos.lexemas + " >\n";
-                    break;    
-                    
-                    
+                    break;
+
             }
         }
 
