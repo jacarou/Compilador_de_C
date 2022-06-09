@@ -8,6 +8,6 @@ if(a==1){
  b=5;
 }
 printf("Despues: %d \n",b);
-
+system("pause");
 return b;
 }

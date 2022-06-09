@@ -1,11 +1,21 @@
-package SoloLexico;
 
+package Analizador;
+
+/**
+ *
+ * @author Jhony Alejandro Caro
+ * Junio 2022
+ */
 public enum Tokens {
-    
+    BitAnd,
+    BitOr,
     Break,
+    Byte,
     
     Cadena,
     Case,
+    Char,
+    Cin,
     Coma,
     Comillas,
     ComparadorIgual,
@@ -13,19 +23,27 @@ public enum Tokens {
     Continue,
     Corchete_a,
     Corchete_c,
+    Cout,
     
     Default,
     Define,
+    Decremento,
     Diferente,
     Division,
     DivisionIgual,
     Do,
-    Doble,
+    Double,
+    DobleMayor,
+    DobleMenor,
+    DosPuntos,
     
     Else,
+    Endl,
     ERROR,
+    Et,
     
     False,
+    Float,
     For,
     
     Identificador,
@@ -33,6 +51,8 @@ public enum Tokens {
     Igual,
     Int,
     Include,
+    Incremento,
+    Iostream,
     
     Linea,
     Llave_a,
@@ -46,11 +66,17 @@ public enum Tokens {
     MenorQue,
     MayorIgual,
     MenorIgual,
+    Modulo,
+    ModuloIgual,
     Multiplicacion,
     MultiplicacionIgual,
     
+    Namespace,
+    Negador,
     Numero,
     Numeral,
+    
+    O_logico,
     
     Parent_a,
     Parent_c,
@@ -60,7 +86,14 @@ public enum Tokens {
     Resta,
     Return,
     
+    Suma,
+    Std,
+    
     True,
     
-    Suma  
+    Using,
+
+    While,
+    
+    Y_logico
 }

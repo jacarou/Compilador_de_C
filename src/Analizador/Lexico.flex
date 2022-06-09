@@ -1,5 +1,5 @@
-package SoloLexico;
-import static SoloLexico.Tokens.*;
+package Analizador;
+import static Analizador.Tokens.*;
 %%
 %class Lexico
 %type Tokens
@@ -18,16 +18,16 @@ espacio=[ \t \r]+
 ( "break" ) {lexemas=yytext(); return Break;}
 
 /* Tipo de dato String */
-( String ) {lexemas=yytext(); return Cadena;}
+( string ) {lexemas=yytext(); return Cadena;}
 
 /* Marcador de casos*/
 ( "case" ) {lexemas=yytext(); return Case;}
 
 /* Comentarios */
-( "//"(.)* ) {/*Ignore*/}
+( "//"(.)* | "/"(.)* ) {/*Ignore*/}
 
 /* Comillas */
-( "\"" ) {lexemas=yytext(); return Comillas;}
+( "\"" | "\\\"" ) {lexemas=yytext(); return Comillas;}
 
 /* Marcador de constante*/
 ( "const" ) {lexemas=yytext(); return Const;}
@@ -47,6 +47,9 @@ espacio=[ \t \r]+
 /* Marcador define*/
 ( "define" ) {lexemas=yytext(); return Define;}
 
+/* Marcador while*/
+( "while" ) {lexemas=yytext(); return While;}
+
 /* Operador Division*/
 ( "/" ) {lexemas=yytext(); return Division;}
 
@@ -54,7 +57,7 @@ espacio=[ \t \r]+
 ( "do" ) {lexemas=yytext(); return Do;}
 
 /* Double */
-(double) {lexemas=yytext(); return Doble;}
+(double) {lexemas=yytext(); return Double;}
 
 /* Marcador Else*/
 ( "else" ) {lexemas=yytext(); return Else;}
@@ -89,8 +92,26 @@ espacio=[ \t \r]+
 /* Operador Diferente */
 ( "!=" ) {lexemas=yytext(); return Diferente;}
 
+/* Operador Negador*/
+( "!" ) {lexemas=yytext(); return Negador;}
+
+/* Incremento */
+( "++" ) {lexemas=yytext(); return Incremento;}
+
+/* Decremento*/
+( "--" ) {lexemas=yytext(); return Decremento;}
+
 /* Operador Igual */
 ( "=" ) {lexemas=yytext(); return Igual;}
+
+/* Doble mayor*/
+( ">>" ) {lexemas=yytext(); return DobleMayor;}
+
+/* Modulo igual*/
+( "%=" ) {lexemas=yytext(); return ModuloIgual;}
+
+/* Doble menor*/
+( "<<" ) {lexemas=yytext(); return DobleMenor;}
 
 /* Operador Mayor que */
 ( ">" ) {lexemas=yytext(); return MayorQue;}
@@ -98,17 +119,59 @@ espacio=[ \t \r]+
 /* Operador Menor que */
 ( "<" ) {lexemas=yytext(); return MenorQue;}
 
+/* Signo dos puntos*/
+( ":" ) {lexemas=yytext(); return DosPuntos;}
+
+/* operador y logico*/
+( "&&" ) {lexemas=yytext(); return Y_logico;}
+
+/* operador bitand*/
+( "&" ) {lexemas=yytext(); return BitAnd;}
+
+/* operador o logico*/
+( "||" ) {lexemas=yytext(); return O_logico;}
+
+/* operador bitor*/
+( "|" ) {lexemas=yytext(); return BitOr;}
+
 /* Integer */
 (int) {lexemas=yytext(); return Int;}
 
+/* Long */
+(long) {lexemas=yytext(); return Long;}
+
+/* Float*/
+(float) {lexemas=yytext(); return Float;}
+
+/* Byte*/
+(byte) {lexemas=yytext(); return Byte;}
+
+/* Char*/
+(char) {lexemas=yytext(); return Char;}
+
 /* Marcador include */
 ( "include" ) {lexemas=yytext(); return Include;}
+
+/* Marcador namespace */
+( "namespace" ) {lexemas=yytext(); return Namespace;}
+
+/* Marcador std */
+( "std" ) {lexemas=yytext(); return Std;}
+
+/* Marcador iosteam */
+( "iostream" ) {lexemas=yytext(); return Iostream;}
+
+/* Marcador using */
+( "using" ) {lexemas=yytext(); return Using;}
 
 /* Marcador false*/
 ( "false" ) {lexemas=yytext(); return False;}
 
 /* Marcador true*/
 ( "true" ) {lexemas=yytext(); return True;}
+
+/* Salto de linea endl*/
+( "endl" ) {lexemas=yytext(); return Endl;}
 
 /* Salto de linea */
 ( "\n" ) {return Linea;}
@@ -122,8 +185,17 @@ espacio=[ \t \r]+
 /* Marcador de inicio de algoritmo */
 ( "main" ) {lexemas=yytext(); return Main;}
 
+/* Salida por consola*/
+( "cout" ) {lexemas=yytext(); return Cout;}
+
+/* Entrada por consola */
+( "cin" ) {lexemas=yytext(); return Cin;}
+
 /* Operador Multiplicación */
 ( "*" ) {lexemas=yytext(); return Multiplicacion;}
+
+/* Operador Modulo*/
+( "%" ) {lexemas=yytext(); return Modulo;}
 
 /* Numeral # */
 ( "#" ) {lexemas=yytext(); return Numeral;}
