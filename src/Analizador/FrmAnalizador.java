@@ -330,11 +330,32 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 case Namespace:
                     resultado += "  <Reservado namespace>\t" + lexicos.lexemas + "\n";
                     break;
+                case Case:
+                    resultado += "  <Reservado case>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Continue:
+                    resultado += "  <Reservado continue>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Break:
+                    resultado += "  <Reservado break>\t" + lexicos.lexemas + "\n";
+                    break;
                 case Iostream:
                     resultado += "  <Reservado iostream>\t" + lexicos.lexemas + "\n";
                     break;
                 case Using:
                     resultado += "  <Reservado using>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Const:
+                    resultado += "  <Reservado using>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Default:
+                    resultado += "  <Reservado default>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Define:
+                    resultado += "  <Reservado define>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Register:
+                    resultado += "  <Reservado register>\t" + lexicos.lexemas + "\n";
                     break;
                 case Numeral:
                     resultado += "  <Reservado numeral>\t" + lexicos.lexemas + "\n";

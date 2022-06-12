@@ -83,6 +83,7 @@ public enum Tokens {
     P_coma,
     Punto,
     
+    Register,
     Resta,
     Return,
     

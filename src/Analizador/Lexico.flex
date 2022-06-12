@@ -185,6 +185,9 @@ espacio=[ \t \r]+
 /* Marcador de inicio de algoritmo */
 ( "main" ) {lexemas=yytext(); return Main;}
 
+/* Marcador register*/
+( "register" ) {lexemas=yytext(); return Register;}
+
 /* Salida por consola*/
 ( "cout" ) {lexemas=yytext(); return Cout;}
 
