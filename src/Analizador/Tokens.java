@@ -87,13 +87,20 @@ public enum Tokens {
     Resta,
     Return,
     
+    Short,
     Suma,
     Std,
+    Struct,
+    Switch,
     
+    Typedef,
     True,
     
+    Unsigned,
     Using,
 
+    Void,
+    
     While,
     
     Y_logico

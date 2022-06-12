@@ -140,6 +140,9 @@ espacio=[ \t \r]+
 /* Long */
 (long) {lexemas=yytext(); return Long;}
 
+/* Short*/
+(short) {lexemas=yytext(); return Short;}
+
 /* Float*/
 (float) {lexemas=yytext(); return Float;}
 
@@ -190,6 +193,18 @@ espacio=[ \t \r]+
 
 /* Salida por consola*/
 ( "cout" ) {lexemas=yytext(); return Cout;}
+
+/* Marcador Void*/
+( "void" ) {lexemas=yytext(); return Void;}
+
+/* Marcador Typedef*/
+( "typedef" ) {lexemas=yytext(); return Typedef;}
+
+/* Marcador switch*/
+( "switch" ) {lexemas=yytext(); return Switch;}
+
+/* Marcador unsigned*/
+( "unsigned" ) {lexemas=yytext(); return Unsigned;}
 
 /* Entrada por consola */
 ( "cin" ) {lexemas=yytext(); return Cin;}

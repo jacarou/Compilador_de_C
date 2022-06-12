@@ -185,6 +185,9 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 case Long:
                     resultado += "  <Tipo de dato long>\t" + lexicos.lexemas + "\n";
                     break;
+                case Short:
+                    resultado += "  <Tipo de dato short>\t" + lexicos.lexemas + "\n";
+                    break;
                 case Char:
                     resultado += "  <Tipo de dato char>\t" + lexicos.lexemas + "\n";
                     break;    
@@ -202,7 +205,16 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;    
                 case Return:
                     resultado += "  <Reservada return>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
+                case Void:
+                    resultado += "  <Reservada switch>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Typedef:
+                    resultado += "  <Reservada switch>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Switch:
+                    resultado += "  <Reservada switch>\t" + lexicos.lexemas + "\n";
+                    break;
                 case Do:
                     resultado += "  <Reservada do>\t" + lexicos.lexemas + "\n";
                     break;
@@ -354,8 +366,14 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 case Define:
                     resultado += "  <Reservado define>\t" + lexicos.lexemas + "\n";
                     break;
+                case Unsigned:
+                    resultado += "  <Reservado unsigned>\t" + lexicos.lexemas + "\n";
+                    break;
                 case Register:
                     resultado += "  <Reservado register>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Struct:
+                    resultado += "  <Reservado struct>\t" + lexicos.lexemas + "\n";
                     break;
                 case Numeral:
                     resultado += "  <Reservado numeral>\t" + lexicos.lexemas + "\n";
