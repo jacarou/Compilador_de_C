@@ -63,7 +63,9 @@ DECLARACION ::=
     Char Identificador P_coma |
     Char Identificador Igual Comillas Comillas P_coma |
     Unsigned Char Identificador P_coma |
-    Unsigned Char Identificador Igual Comillas Comillas P_coma
+    Unsigned Char Identificador Igual Comillas Comillas P_coma |
+    Cadena Identificador P_coma |
+    Cadena Identificador Igual Comillas Comillas P_coma
 ;
 /*
 SENTENCIA_BOOLEANA ::= 

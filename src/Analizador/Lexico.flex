@@ -5,7 +5,7 @@ import static Analizador.Tokens.*;
 %type Tokens
 L=[a-zA-Z_]+
 D=[0-9]+
-espacio=[ \t \r]+
+espacio=[ \\t \\r]+
 %{
     public String lexemas;
 %}
