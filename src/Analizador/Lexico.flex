@@ -5,7 +5,7 @@ import static Analizador.Tokens.*;
 %type Tokens
 L=[a-zA-Z_]+
 D=[0-9]+
-espacio=[ \\t \\r]+
+espacio=[ \t \r \\t \\r]+
 %{
     public String lexemas;
 %}
@@ -136,6 +136,9 @@ espacio=[ \\t \\r]+
 
 /* Integer */
 (int) {lexemas=yytext(); return Int;}
+
+/* Bool */
+(bool) {lexemas=yytext(); return Bool;}
 
 /* Long */
 (long) {lexemas=yytext(); return Long;}

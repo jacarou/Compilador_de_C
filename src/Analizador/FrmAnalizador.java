@@ -179,6 +179,9 @@ public class FrmAnalizador extends javax.swing.JFrame {
                 case Float:
                     resultado += "  <Tipo de dato float>\t" + lexicos.lexemas + "\n";
                     break;
+                case Bool:
+                    resultado += "  <Tipo de dato bool>\t" + lexicos.lexemas + "\n";
+                    break;
                 case Byte:
                     resultado += "  <Tipo de dato byte>\t" + lexicos.lexemas + "\n";
                     break;

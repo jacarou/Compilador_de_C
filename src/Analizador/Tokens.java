@@ -7,6 +7,7 @@ package Analizador;
  * Junio 2022
  */
 public enum Tokens {
+    Bool,
     BitAnd,
     BitOr,
     Break,

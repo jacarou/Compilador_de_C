@@ -9,7 +9,7 @@ import java_cup.runtime.Symbol;
 %char
 L=[a-zA-Z_]+
 D=[0-9]+
-espacio=[ \\t \\r \\n]+
+espacio=[ \t \r \n \\t \\r \\n]+
 %{
     private Symbol symbol(int type, Object value){
         return new Symbol(type, yyline, yycolumn, value);
@@ -63,6 +63,9 @@ espacio=[ \\t \\r \\n]+
 
 /* Palabra reservada Do */
 ( do ) {return new Symbol(sym.Do, yychar, yyline, yytext());}
+
+/* Tipo de dato bool */
+( bool ) {return new Symbol(sym.Bool, yychar, yyline, yytext());}
 
 /* Tipo de dato double */
 ( double ) {return new Symbol(sym.Double, yychar, yyline, yytext());}
