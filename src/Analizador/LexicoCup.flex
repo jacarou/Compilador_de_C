@@ -9,7 +9,7 @@ import java_cup.runtime.Symbol;
 %char
 L=[a-zA-Z_]+
 D=[0-9]+
-espacio=[ \t \r \n \\t \\r \\n]+
+espacio=[ \t \r \n]+
 %{
     private Symbol symbol(int type, Object value){
         return new Symbol(type, yyline, yycolumn, value);
@@ -35,7 +35,7 @@ espacio=[ \t \r \n \\t \\r \\n]+
 ( "//"(.)* | "/"(.)* ) {/*Ignore*/}
 
 /* Comillas */
-( "\"" | "\\\"" ) {return new Symbol(sym.Comillas, yychar, yyline, yytext());}
+( "\"") {return new Symbol(sym.Comillas, yychar, yyline, yytext());}
 
 /* Palabra reservada const*/
 ( const ) {return new Symbol(sym.Const, yychar, yyline, yytext());}

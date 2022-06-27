@@ -24,13 +24,25 @@ terminal Bool, BitAnd, BitOr, Break, Byte, Cadena, Case, Char, Cin, Coma, Comill
     O_logico, Parent_a, Parent_c, P_coma, Punto, Register, Resta, Return, Short, Suma, Std, Struct,
     Switch, Typedef, True, Unsigned, Using, Void, While, Y_logico;
 
-non terminal INICIO, SENTENCIA, DECLARACION, IF, IF_ELSE,
+non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     SENTENCIA_BOOLEANA_COMPUESTA, SENTENCIA_BOOLEANA_SIMPLE,
-    OPERADORES_RELACIONALES, DECLARACION_ANIDADA;
+    OPERADORES_RELACIONALES, DECLARACION_ANIDADA, IMPORTACION,
+    SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, FOR_PARTE_TRES;
 
 start with INICIO;
 
+IMPORTACION ::=
+    Numeral Include MenorQue Identificador Punto Identificador MayorQue |
+    Numeral Include Comillas Identificador Punto Identificador Comillas |
+    Numeral Include MenorQue Identificador MayorQue |
+    IMPORTACION Numeral Include MenorQue Identificador Punto Identificador MayorQue |
+    IMPORTACION Numeral Include Comillas Identificador Punto Identificador Comillas |
+    IMPORTACION Numeral Include MenorQue Identificador MayorQue
+;
+
 INICIO ::= 
+    IMPORTACION Using Namespace Std P_coma Int Main Parent_a Parent_c Llave_a SENTENCIA Llave_c |
+    IMPORTACION Int Main Parent_a Parent_c Llave_a SENTENCIA Llave_c |
     Int Main Parent_a Parent_c Llave_a SENTENCIA Llave_c |
     Main Parent_a Parent_c Llave_a SENTENCIA Llave_c
 ;
@@ -39,8 +51,8 @@ SENTENCIA ::=
     DECLARACION |
     SENTENCIA IF |
     IF |
-    SENTENCIA IF_ELSE |
-    IF_ELSE 
+    SENTENCIA FOR|
+    FOR 
 ;
 DECLARACION_ANIDADA::=
     Identificador Igual Numero |
@@ -62,8 +74,7 @@ DECLARACION ::=
     Double DECLARACION_ANIDADA P_coma |
     Long Double DECLARACION_ANIDADA P_coma |
     Float DECLARACION_ANIDADA P_coma |
-    Char Identificador P_coma |
-    Char Identificador Igual  P_coma |
+    Char DECLARACION_ANIDADA P_coma |
     Unsigned Char DECLARACION_ANIDADA P_coma |
     Cadena DECLARACION_ANIDADA P_coma 
 ;
@@ -73,7 +84,9 @@ OPERADORES_RELACIONALES::=
     ComparadorIgual |
     MenorIgual |
     MayorIgual |
-    Diferente 
+    Diferente |
+    MenorQue |
+    MayorQue 
 ;
 SENTENCIA_BOOLEANA_SIMPLE::=
     True |
@@ -92,9 +105,44 @@ SENTENCIA_BOOLEANA_COMPUESTA::=
     Negador Parent_a SENTENCIA_BOOLEANA_COMPUESTA Parent_c |
     Negador SENTENCIA_BOOLEANA_SIMPLE 
 ;
+SENTENCIA_BOOLEANA_ANIDADA::=
+    SENTENCIA_BOOLEANA_COMPUESTA |    
+    SENTENCIA_BOOLEANA_SIMPLE |    
+    SENTENCIA_BOOLEANA_COMPUESTA Y_logico SENTENCIA_BOOLEANA_ANIDADA |    
+    SENTENCIA_BOOLEANA_COMPUESTA O_logico SENTENCIA_BOOLEANA_ANIDADA |
+    SENTENCIA_BOOLEANA_SIMPLE Y_logico SENTENCIA_BOOLEANA_ANIDADA |
+    SENTENCIA_BOOLEANA_SIMPLE O_logico SENTENCIA_BOOLEANA_ANIDADA 
+;
 IF ::=
-    If Parent_a SENTENCIA_BOOLEANA_COMPUESTA Parent_c Llave_a SENTENCIA Llave_c |
-    If Parent_a SENTENCIA_BOOLEANA_SIMPLE Parent_c Llave_a SENTENCIA Llave_c
+    If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c |
+    If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
 ;
-IF_ELSE ::= If Parent_a SENTENCIA_BOOLEANA_COMPUESTA Parent_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
+
+FOR_PARTE_UNO::=
+    Int Identificador Igual Numero |
+    Identificador |
+    Identificador Igual Numero 
 ;
+FOR_PARTE_TRES::=
+    Incremento Identificador |
+    Decremento Identificador |
+    Identificador Incremento |
+    Identificador Decremento |
+    Identificador MasIgual Numero |
+    Identificador MenosIgual Numero |
+    Identificador MultiplicacionIgual Numero |
+    Identificador DivisionIgual Numero |
+    Identificador ModuloIgual Numero |
+    Identificador Igual Identificador Suma Identificador |
+    Identificador Igual Identificador Resta Identificador |
+    Identificador Igual Identificador Division Identificador |
+    Identificador Igual Identificador Multiplicacion Identificador 
+;
+   
+FOR ::=
+    For Parent_a FOR_PARTE_UNO P_coma SENTENCIA_BOOLEANA_ANIDADA P_coma FOR_PARTE_TRES Parent_c Llave_a SENTENCIA Llave_c
+;
+
+
+
+

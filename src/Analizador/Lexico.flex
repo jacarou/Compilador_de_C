@@ -5,7 +5,7 @@ import static Analizador.Tokens.*;
 %type Tokens
 L=[a-zA-Z_]+
 D=[0-9]+
-espacio=[ \t \r \\t \\r]+
+espacio=[ \t \r]+
 %{
     public String lexemas;
 %}
@@ -27,7 +27,7 @@ espacio=[ \t \r \\t \\r]+
 ( "//"(.)* | "/"(.)* ) {/*Ignore*/}
 
 /* Comillas */
-( "\"" | "\\\"" ) {lexemas=yytext(); return Comillas;}
+( "\"") {lexemas=yytext(); return Comillas;}
 
 /* Marcador de constante*/
 ( "const" ) {lexemas=yytext(); return Const;}
