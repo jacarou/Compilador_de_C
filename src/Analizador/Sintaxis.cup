@@ -29,7 +29,8 @@ non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     OPERADORES_RELACIONALES, DECLARACION_ANIDADA, IMPORTACION,
     SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, OPERACIONES_COMPLEMENTARIAS,
     WHILE, DO_WHILE, OPERADORES_ARITMETICOS, COUT, SALIDA, CIN, ENTRADA,
-    CASE, SWITCH;
+    CASE, SWITCH, CREACION_ARREGLO, DECLARACION_ARREGLO_ANIDADA,
+    DECLARACION_ARREGLO, IDENTIFICADORES;
 
 start with INICIO;
 
@@ -79,7 +80,30 @@ DECLARACION_ANIDADA::=
     Identificador Igual Comillas Identificador Comillas Coma DECLARACION_ANIDADA |
     Identificador Coma DECLARACION_ANIDADA |
     Identificador Igual Identificador |
-    Identificador
+    Identificador Igual True Coma DECLARACION_ANIDADA |
+    Identificador Igual False Coma DECLARACION_ANIDADA |
+    Identificador Igual True |
+    Identificador Igual False |
+    Identificador 
+;
+CREACION_ARREGLO::=
+    Numero Coma CREACION_ARREGLO |
+    Numero |
+    Comillas Identificador Comillas Coma CREACION_ARREGLO |
+    Comillas Identificador Comillas
+;
+DECLARACION_ARREGLO_ANIDADA::=
+    Int DECLARACION_ARREGLO P_coma |
+    Cadena DECLARACION_ARREGLO P_coma |
+    Char DECLARACION_ARREGLO P_coma 
+;
+DECLARACION_ARREGLO::=
+    Identificador Corchete_a Corchete_c Igual Llave_a CREACION_ARREGLO Llave_c Coma DECLARACION_ARREGLO |
+    Identificador Corchete_a Corchete_c Igual Llave_a CREACION_ARREGLO Llave_c |
+    Identificador Corchete_a Numero Corchete_c Igual Llave_a CREACION_ARREGLO Llave_c Coma DECLARACION_ARREGLO |
+    Identificador Corchete_a Numero Corchete_c Igual Llave_a CREACION_ARREGLO Llave_c |
+    Identificador Corchete_a Numero Corchete_c Coma DECLARACION_ARREGLO |
+    Identificador Corchete_a Numero Corchete_c 
 ;
 DECLARACION ::=   
     Int DECLARACION_ANIDADA P_coma |
@@ -93,13 +117,16 @@ DECLARACION ::=
     Float DECLARACION_ANIDADA P_coma |
     Char DECLARACION_ANIDADA P_coma |
     Unsigned Char DECLARACION_ANIDADA P_coma |
-    Cadena DECLARACION_ANIDADA P_coma 
+    Cadena DECLARACION_ANIDADA P_coma |
+    Bool DECLARACION_ANIDADA  P_coma |
+    DECLARACION_ARREGLO_ANIDADA
 ;
 OPERADORES_ARITMETICOS::=
     Suma |
     Resta |
     Multiplicacion |
-    Division
+    Division |
+    Modulo
 ;
 OPERADORES_RELACIONALES::=
     BitOr |
@@ -114,10 +141,15 @@ OPERADORES_RELACIONALES::=
 SENTENCIA_BOOLEANA_SIMPLE::=
     True |
     False |
-    Identificador |
+    IDENTIFICADORES |
+    IDENTIFICADORES OPERADORES_ARITMETICOS IDENTIFICADORES |
+    IDENTIFICADORES OPERADORES_ARITMETICOS Numero |
+    Numero OPERADORES_ARITMETICOS IDENTIFICADORES |
+    Numero OPERADORES_ARITMETICOS Numero |
     Numero |
     Comillas Identificador Comillas |
-    Comillas Comillas
+    Comillas Comillas |
+    Parent_a SENTENCIA_BOOLEANA_SIMPLE Parent_c
 ;
 SENTENCIA_BOOLEANA_COMPUESTA::=
     Negador SENTENCIA_BOOLEANA_SIMPLE OPERADORES_RELACIONALES SENTENCIA_BOOLEANA_SIMPLE |
@@ -143,21 +175,36 @@ IF ::=
 ;
 FOR_PARTE_UNO::=
     Int Identificador Igual Numero |
-    Identificador |
-    Identificador Igual Numero 
+    IDENTIFICADORES |
+    IDENTIFICADORES Igual Numero 
 ;
+IDENTIFICADORES::=
+    Identificador |
+    Identificador Corchete_a Numero Corchete_c
+    Identificador Corchete_a Identificador Corchete_c
+;
+
 OPERACIONES_COMPLEMENTARIAS::=
-    Incremento Identificador |
-    Decremento Identificador |
-    Identificador Incremento |
-    Identificador Decremento |
-    Identificador MasIgual Numero |
-    Identificador MenosIgual Numero |
-    Identificador MultiplicacionIgual Numero |
-    Identificador DivisionIgual Numero |
-    Identificador ModuloIgual Numero |
-    Identificador Igual Identificador |
-    Identificador Igual Identificador OPERADORES_ARITMETICOS Identificador 
+    Incremento IDENTIFICADORES |
+    Decremento IDENTIFICADORES |
+    IDENTIFICADORES Incremento |
+    IDENTIFICADORES Decremento |
+    IDENTIFICADORES MasIgual IDENTIFICADORES |
+    IDENTIFICADORES MenosIgual IDENTIFICADORES |
+    IDENTIFICADORES MultiplicacionIgual IDENTIFICADORES |
+    IDENTIFICADORES DivisionIgual IDENTIFICADORES |
+    IDENTIFICADORES ModuloIgual IDENTIFICADORES |
+    IDENTIFICADORES Igual IDENTIFICADORES |
+    IDENTIFICADORES Igual IDENTIFICADORES OPERADORES_ARITMETICOS IDENTIFICADORES |
+    IDENTIFICADORES MasIgual Numero |
+    IDENTIFICADORES MenosIgual Numero |
+    IDENTIFICADORES MultiplicacionIgual Numero |
+    IDENTIFICADORES DivisionIgual Numero |
+    IDENTIFICADORES ModuloIgual Numero |
+    IDENTIFICADORES Igual Numero |
+    IDENTIFICADORES Igual Numero OPERADORES_ARITMETICOS IDENTIFICADORES |
+    IDENTIFICADORES Igual IDENTIFICADORES OPERADORES_ARITMETICOS Numero |
+    IDENTIFICADORES Igual Numero OPERADORES_ARITMETICOS Numero
 ;
 FOR::=
     For Parent_a FOR_PARTE_UNO P_coma SENTENCIA_BOOLEANA_ANIDADA P_coma OPERACIONES_COMPLEMENTARIAS Parent_c Llave_a SENTENCIA Llave_c
@@ -172,15 +219,17 @@ COUT::=
     Cout DobleMenor SALIDA P_coma
 ;
 SALIDA::=
-    Identificador |
+    IDENTIFICADORES |
     Comillas Identificador Comillas |
-    Identificador DobleMenor SALIDA |
+    Comillas Comillas |
     Comillas Identificador Comillas DobleMenor SALIDA |
+    Comillas Comillas DobleMenor SALIDA |
+    IDENTIFICADORES DobleMenor SALIDA |
     Endl
 ;
 ENTRADA::=
-    Identificador |
-    Identificador DobleMayor ENTRADA 
+    IDENTIFICADORES |
+    IDENTIFICADORES DobleMayor ENTRADA 
 ;
 CIN::=
     Cin DobleMayor ENTRADA P_coma
@@ -189,13 +238,14 @@ CASE::=
     Case Numero DosPuntos SENTENCIA Break P_coma |
     Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
     Case Comillas Comillas DosPuntos SENTENCIA Break P_coma |
-    Case Identificador DosPuntos SENTENCIA Break P_coma |
+    Case IDENTIFICADORES DosPuntos SENTENCIA Break P_coma |
     CASE Case Numero DosPuntos SENTENCIA Break P_coma |
     CASE Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
-    CASE Case Identificador DosPuntos SENTENCIA Break P_coma |
+    CASE Case IDENTIFICADORES DosPuntos SENTENCIA Break P_coma |
     CASE Case Comillas Comillas DosPuntos SENTENCIA Break P_coma 
 ;
 SWITCH::=
-    Switch Parent_a Identificador Parent_c Llave_a CASE Default DosPuntos SENTENCIA Break P_coma Llave_c |
-    Switch Parent_a Identificador Parent_c Llave_a CASE Llave_c
+    Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Default DosPuntos SENTENCIA Break P_coma Llave_c |
+    Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Default DosPuntos SENTENCIA Llave_c |
+    Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Llave_c
 ;

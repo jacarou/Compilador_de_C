@@ -55,6 +55,9 @@ espacio=[ \t \r \n]+
 /* Palabra reservada define*/
 ( define ) {return new Symbol(sym.Define, yychar, yyline, yytext());}
 
+/* Salto, tabulacion y espacio */
+( "\\n" | "\\t" ) {/*Ignore*/}
+
 /* Palabra reservada while*/
 ( while ) {return new Symbol(sym.While, yychar, yyline, yytext());}
 

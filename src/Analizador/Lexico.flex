@@ -53,6 +53,9 @@ espacio=[ \t \r]+
 /* Operador Division*/
 ( "/" ) {lexemas=yytext(); return Division;}
 
+/* Salto, tabulacion y espacio */
+( "\\n" | "\\t" ) {/*Ignore*/}
+
 /* Marcador Do*/
 ( "do" ) {lexemas=yytext(); return Do;}
 
