@@ -27,7 +27,8 @@ terminal Bool, BitAnd, BitOr, Break, Byte, Cadena, Case, Char, Cin, Coma, Comill
 non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     SENTENCIA_BOOLEANA_COMPUESTA, SENTENCIA_BOOLEANA_SIMPLE,
     OPERADORES_RELACIONALES, DECLARACION_ANIDADA, IMPORTACION,
-    SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, FOR_PARTE_TRES;
+    SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, OPERACIONES_COMPLEMENTARIAS,
+    WHILE, DO_WHILE, OPERADORES_ARITMETICOS;
 
 start with INICIO;
 
@@ -52,7 +53,13 @@ SENTENCIA ::=
     SENTENCIA IF |
     IF |
     SENTENCIA FOR|
-    FOR 
+    FOR |
+    SENTENCIA WHILE |
+    WHILE |
+    SENTENCIA DO_WHILE |
+    DO_WHILE |
+    SENTENCIA OPERACIONES_COMPLEMENTARIAS P_coma |
+    OPERACIONES_COMPLEMENTARIAS P_coma
 ;
 DECLARACION_ANIDADA::=
     Identificador Igual Numero |
@@ -62,6 +69,7 @@ DECLARACION_ANIDADA::=
     Identificador Igual Comillas Identificador Comillas |
     Identificador Igual Comillas Identificador Comillas Coma DECLARACION_ANIDADA |
     Identificador Coma DECLARACION_ANIDADA |
+    Identificador Igual Identificador |
     Identificador
 ;
 DECLARACION ::=   
@@ -77,6 +85,12 @@ DECLARACION ::=
     Char DECLARACION_ANIDADA P_coma |
     Unsigned Char DECLARACION_ANIDADA P_coma |
     Cadena DECLARACION_ANIDADA P_coma 
+;
+OPERADORES_ARITMETICOS::=
+    Suma |
+    Resta |
+    Multiplicacion |
+    Division
 ;
 OPERADORES_RELACIONALES::=
     BitOr |
@@ -117,13 +131,12 @@ IF ::=
     If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c |
     If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
 ;
-
 FOR_PARTE_UNO::=
     Int Identificador Igual Numero |
     Identificador |
     Identificador Igual Numero 
 ;
-FOR_PARTE_TRES::=
+OPERACIONES_COMPLEMENTARIAS::=
     Incremento Identificador |
     Decremento Identificador |
     Identificador Incremento |
@@ -133,16 +146,15 @@ FOR_PARTE_TRES::=
     Identificador MultiplicacionIgual Numero |
     Identificador DivisionIgual Numero |
     Identificador ModuloIgual Numero |
-    Identificador Igual Identificador Suma Identificador |
-    Identificador Igual Identificador Resta Identificador |
-    Identificador Igual Identificador Division Identificador |
-    Identificador Igual Identificador Multiplicacion Identificador 
+    Identificador Igual Identificador |
+    Identificador Igual Identificador OPERADORES_ARITMETICOS Identificador 
 ;
-   
-FOR ::=
-    For Parent_a FOR_PARTE_UNO P_coma SENTENCIA_BOOLEANA_ANIDADA P_coma FOR_PARTE_TRES Parent_c Llave_a SENTENCIA Llave_c
+FOR::=
+    For Parent_a FOR_PARTE_UNO P_coma SENTENCIA_BOOLEANA_ANIDADA P_coma OPERACIONES_COMPLEMENTARIAS Parent_c Llave_a SENTENCIA Llave_c
 ;
-
-
-
-
+WHILE::=
+    While Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c
+;
+DO_WHILE::=
+    Do Llave_a SENTENCIA Llave_c While Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c P_coma
+;
