@@ -28,7 +28,8 @@ non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     SENTENCIA_BOOLEANA_COMPUESTA, SENTENCIA_BOOLEANA_SIMPLE,
     OPERADORES_RELACIONALES, DECLARACION_ANIDADA, IMPORTACION,
     SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, OPERACIONES_COMPLEMENTARIAS,
-    WHILE, DO_WHILE, OPERADORES_ARITMETICOS;
+    WHILE, DO_WHILE, OPERADORES_ARITMETICOS, COUT, SALIDA, CIN, ENTRADA,
+    CASE, SWITCH;
 
 start with INICIO;
 
@@ -36,9 +37,11 @@ IMPORTACION ::=
     Numeral Include MenorQue Identificador Punto Identificador MayorQue |
     Numeral Include Comillas Identificador Punto Identificador Comillas |
     Numeral Include MenorQue Identificador MayorQue |
+    Numeral Include MenorQue Iostream MayorQue |
     IMPORTACION Numeral Include MenorQue Identificador Punto Identificador MayorQue |
     IMPORTACION Numeral Include Comillas Identificador Punto Identificador Comillas |
-    IMPORTACION Numeral Include MenorQue Identificador MayorQue
+    IMPORTACION Numeral Include MenorQue Identificador MayorQue |
+    IMPORTACION Numeral Include MenorQue Iostream MayorQue
 ;
 
 INICIO ::= 
@@ -59,7 +62,13 @@ SENTENCIA ::=
     SENTENCIA DO_WHILE |
     DO_WHILE |
     SENTENCIA OPERACIONES_COMPLEMENTARIAS P_coma |
-    OPERACIONES_COMPLEMENTARIAS P_coma
+    OPERACIONES_COMPLEMENTARIAS P_coma |
+    SENTENCIA COUT |
+    COUT |
+    SENTENCIA CIN |
+    CIN |
+    SENTENCIA SWITCH|
+    SWITCH
 ;
 DECLARACION_ANIDADA::=
     Identificador Igual Numero |
@@ -129,7 +138,8 @@ SENTENCIA_BOOLEANA_ANIDADA::=
 ;
 IF ::=
     If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c |
-    If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
+    If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c |
+    If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else IF
 ;
 FOR_PARTE_UNO::=
     Int Identificador Igual Numero |
@@ -157,4 +167,35 @@ WHILE::=
 ;
 DO_WHILE::=
     Do Llave_a SENTENCIA Llave_c While Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c P_coma
+;
+COUT::=
+    Cout DobleMenor SALIDA P_coma
+;
+SALIDA::=
+    Identificador |
+    Comillas Identificador Comillas |
+    Identificador DobleMenor SALIDA |
+    Comillas Identificador Comillas DobleMenor SALIDA |
+    Endl
+;
+ENTRADA::=
+    Identificador |
+    Identificador DobleMayor ENTRADA 
+;
+CIN::=
+    Cin DobleMayor ENTRADA P_coma
+;
+CASE::=
+    Case Numero DosPuntos SENTENCIA Break P_coma |
+    Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
+    Case Comillas Comillas DosPuntos SENTENCIA Break P_coma |
+    Case Identificador DosPuntos SENTENCIA Break P_coma |
+    CASE Case Numero DosPuntos SENTENCIA Break P_coma |
+    CASE Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
+    CASE Case Identificador DosPuntos SENTENCIA Break P_coma |
+    CASE Case Comillas Comillas DosPuntos SENTENCIA Break P_coma 
+;
+SWITCH::=
+    Switch Parent_a Identificador Parent_c Llave_a CASE Default DosPuntos SENTENCIA Break P_coma Llave_c |
+    Switch Parent_a Identificador Parent_c Llave_a CASE Llave_c
 ;
