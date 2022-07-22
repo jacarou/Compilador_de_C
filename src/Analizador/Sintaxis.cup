@@ -183,7 +183,6 @@ IDENTIFICADORES::=
     Identificador Corchete_a Numero Corchete_c
     Identificador Corchete_a Identificador Corchete_c
 ;
-
 OPERACIONES_COMPLEMENTARIAS::=
     Incremento IDENTIFICADORES |
     Decremento IDENTIFICADORES |
