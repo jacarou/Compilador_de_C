@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/java_cup.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/java-cup-11a.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/JFlex.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
