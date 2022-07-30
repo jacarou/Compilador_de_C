@@ -15,14 +15,14 @@ parser code
 }
 :};
 
-terminal Bool, BitAnd, BitOr, Break, Byte, Cadena, Case, Char, Cin, Coma, Comillas, ComparadorIgual,
-    Const, Continue, Corchete_a, Corchete_c, Cout, Default, Define, Decremento, Diferente,
-    Division, DivisionIgual, Do, Double, DobleMayor, DobleMenor, DosPuntos, Else, Endl, ERROR, Et,
-    False, Float, For, Identificador, If, Igual, Int, Include, Incremento, Iostream, Linea,
+terminal Bool, BitAnd, BitOr, Break, Byte, Case, Char, Cin, Coma, Comilla_simple, Comillas,
+    ComparadorIgual, Const, Continue, Corchete_a, Corchete_c, Cout, Default, Define, Decremento,
+    Diferente, Division, DivisionIgual, Do, Double, DobleMayor, DobleMenor, DosPuntos, Else, Endl,
+    ERROR, Et, False, Float, For, Identificador, If, Igual, Int, Include, Incremento, Iostream, Linea,
     Llave_a, Llave_c, Long, Main, MasIgual, MenosIgual, MayorQue, MenorQue, MayorIgual, MenorIgual,
     Modulo, ModuloIgual, Multiplicacion, MultiplicacionIgual, Namespace, Negador, Numero, Numeral,    
-    O_logico, Parent_a, Parent_c, P_coma, Punto, Register, Resta, Return, Short, Suma, Std, Struct,
-    Switch, Typedef, True, Unsigned, Using, Void, While, Y_logico;
+    O_logico, Parent_a, Parent_c, P_coma, Printf, Punto, Register, Resta, Return, Scanf, Short, Suma,
+    Std, _String, Struct, Switch, Typedef, True, Unsigned, Using, Void, While, Y_logico, STRING_LITERAL;
 
 non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     SENTENCIA_BOOLEANA_COMPUESTA, SENTENCIA_BOOLEANA_SIMPLE,
@@ -30,17 +30,17 @@ non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
     SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, OPERACIONES_COMPLEMENTARIAS,
     WHILE, DO_WHILE, OPERADORES_ARITMETICOS, COUT, SALIDA, CIN, ENTRADA,
     CASE, SWITCH, CREACION_ARREGLO, DECLARACION_ARREGLO_ANIDADA,
-    DECLARACION_ARREGLO, IDENTIFICADORES;
+    DECLARACION_ARREGLO, IDENTIFICADORES, PRINTF, SCANF;
 
 start with INICIO;
 
 IMPORTACION ::=
     Numeral Include MenorQue Identificador Punto Identificador MayorQue |
-    Numeral Include Comillas Identificador Punto Identificador Comillas |
+    Numeral Include STRING_LITERAL |
     Numeral Include MenorQue Identificador MayorQue |
     Numeral Include MenorQue Iostream MayorQue |
     IMPORTACION Numeral Include MenorQue Identificador Punto Identificador MayorQue |
-    IMPORTACION Numeral Include Comillas Identificador Punto Identificador Comillas |
+    IMPORTACION Numeral Include STRING_LITERAL |
     IMPORTACION Numeral Include MenorQue Identificador MayorQue |
     IMPORTACION Numeral Include MenorQue Iostream MayorQue
 ;
@@ -69,15 +69,17 @@ SENTENCIA ::=
     SENTENCIA CIN |
     CIN |
     SENTENCIA SWITCH|
-    SWITCH
+    SWITCH |
+    SENTENCIA PRINTF |
+    PRINTF |
+    SENTENCIA SCANF | 
+    SCANF
 ;
 DECLARACION_ANIDADA::=
     Identificador Igual Numero |
     Identificador Igual Numero Coma DECLARACION_ANIDADA |
-    Identificador Igual Comillas Comillas |
-    Identificador Igual Comillas Comillas Coma DECLARACION_ANIDADA |
-    Identificador Igual Comillas Identificador Comillas |
-    Identificador Igual Comillas Identificador Comillas Coma DECLARACION_ANIDADA |
+    Identificador Igual STRING_LITERAL |
+    Identificador Igual STRING_LITERAL Coma DECLARACION_ANIDADA |
     Identificador Coma DECLARACION_ANIDADA |
     Identificador Igual Identificador |
     Identificador Igual True Coma DECLARACION_ANIDADA |
@@ -89,12 +91,12 @@ DECLARACION_ANIDADA::=
 CREACION_ARREGLO::=
     Numero Coma CREACION_ARREGLO |
     Numero |
-    Comillas Identificador Comillas Coma CREACION_ARREGLO |
-    Comillas Identificador Comillas
+    STRING_LITERAL Coma CREACION_ARREGLO |
+    STRING_LITERAL
 ;
 DECLARACION_ARREGLO_ANIDADA::=
     Int DECLARACION_ARREGLO P_coma |
-    Cadena DECLARACION_ARREGLO P_coma |
+    _String DECLARACION_ARREGLO P_coma |
     Char DECLARACION_ARREGLO P_coma 
 ;
 DECLARACION_ARREGLO::=
@@ -117,7 +119,7 @@ DECLARACION ::=
     Float DECLARACION_ANIDADA P_coma |
     Char DECLARACION_ANIDADA P_coma |
     Unsigned Char DECLARACION_ANIDADA P_coma |
-    Cadena DECLARACION_ANIDADA P_coma |
+    _String DECLARACION_ANIDADA P_coma |
     Bool DECLARACION_ANIDADA  P_coma |
     DECLARACION_ARREGLO_ANIDADA
 ;
@@ -147,8 +149,7 @@ SENTENCIA_BOOLEANA_SIMPLE::=
     Numero OPERADORES_ARITMETICOS IDENTIFICADORES |
     Numero OPERADORES_ARITMETICOS Numero |
     Numero |
-    Comillas Identificador Comillas |
-    Comillas Comillas |
+    STRING_LITERAL |
     Parent_a SENTENCIA_BOOLEANA_SIMPLE Parent_c
 ;
 SENTENCIA_BOOLEANA_COMPUESTA::=
@@ -184,6 +185,7 @@ IDENTIFICADORES::=
     Identificador Corchete_a Identificador Corchete_c
 ;
 OPERACIONES_COMPLEMENTARIAS::=
+    Return Numero |
     Incremento IDENTIFICADORES |
     Decremento IDENTIFICADORES |
     IDENTIFICADORES Incremento |
@@ -219,10 +221,8 @@ COUT::=
 ;
 SALIDA::=
     IDENTIFICADORES |
-    Comillas Identificador Comillas |
-    Comillas Comillas |
-    Comillas Identificador Comillas DobleMenor SALIDA |
-    Comillas Comillas DobleMenor SALIDA |
+    STRING_LITERAL |
+    STRING_LITERAL DobleMenor SALIDA |
     IDENTIFICADORES DobleMenor SALIDA |
     Endl
 ;
@@ -235,16 +235,21 @@ CIN::=
 ;
 CASE::=
     Case Numero DosPuntos SENTENCIA Break P_coma |
-    Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
-    Case Comillas Comillas DosPuntos SENTENCIA Break P_coma |
+    Case STRING_LITERAL DosPuntos SENTENCIA Break P_coma |
     Case IDENTIFICADORES DosPuntos SENTENCIA Break P_coma |
     CASE Case Numero DosPuntos SENTENCIA Break P_coma |
-    CASE Case Comillas Identificador Comillas DosPuntos SENTENCIA Break P_coma |
     CASE Case IDENTIFICADORES DosPuntos SENTENCIA Break P_coma |
-    CASE Case Comillas Comillas DosPuntos SENTENCIA Break P_coma 
+    CASE Case STRING_LITERAL DosPuntos SENTENCIA Break P_coma 
 ;
 SWITCH::=
     Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Default DosPuntos SENTENCIA Break P_coma Llave_c |
     Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Default DosPuntos SENTENCIA Llave_c |
     Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Llave_c
+;
+PRINTF::=
+    Printf Parent_a STRING_LITERAL Coma Identificador Parent_c P_coma |
+    Printf Parent_a STRING_LITERAL Parent_c P_coma
+;
+SCANF::=
+    Scanf Parent_a Identificador Parent_c P_coma
 ;

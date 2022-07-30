@@ -161,10 +161,16 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     cont++;
                     resultado += "LINEA " + cont + "\n";
                     break;
+                case STRING_LITERAL:
+                    resultado += "  <Cadena>\t\t" + lexicos.lexemas + "\n";
+                    break;
                 case Comillas:
                     resultado += "  <Comillas>\t\t" + lexicos.lexemas + "\n";
                     break;
-                case Cadena:
+                case Comilla_simple:
+                    resultado += "  <Comilla simple>\t" + lexicos.lexemas + "\n";
+                    break;
+                case _String:
                     resultado += "  <Tipo de dato String>\t" + lexicos.lexemas + "\n";
                     break;
                 case If:
@@ -187,6 +193,12 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Long:
                     resultado += "  <Tipo de dato long>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Scanf:
+                    resultado += "  <Reservado Scanf>\t" + lexicos.lexemas + "\n";
+                    break;
+                case Printf:
+                    resultado += "  <Reservado Printf>\t" + lexicos.lexemas + "\n";
                     break;
                 case Short:
                     resultado += "  <Tipo de dato short>\t" + lexicos.lexemas + "\n";

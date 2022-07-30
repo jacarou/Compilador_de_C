@@ -26,7 +26,13 @@ espacio=[ \t \r \n]+
 ( break ) {return new Symbol(sym.Break, yychar, yyline, yytext());}
 
 /* Tipo de dato String */
-( string ) {return new Symbol(sym.Cadena, yychar, yyline, yytext());}
+( string ) {return new Symbol(sym._String, yychar, yyline, yytext());}
+
+/* Printf */
+( printf ) {return new Symbol(sym.Printf, yychar, yyline, yytext());}
+
+/* Scanf */
+( scanf ) {return new Symbol(sym.Scanf, yychar, yyline, yytext());}
 
 /* Palabra reservada case*/
 ( case ) {return new Symbol(sym.Case, yychar, yyline, yytext());}
@@ -36,6 +42,12 @@ espacio=[ \t \r \n]+
 
 /* Comillas */
 ( "\"") {return new Symbol(sym.Comillas, yychar, yyline, yytext());}
+
+/* Comilla simple*/
+("'") {return new Symbol(sym.Comilla_simple, yychar, yyline, yytext());}
+
+/* Cadena - texto entre comillas*/
+L?\"(\\.|[^\\\"])*\" {return new Symbol(sym.STRING_LITERAL, yychar, yyline, yytext());}
 
 /* Palabra reservada const*/
 ( const ) {return new Symbol(sym.Const, yychar, yyline, yytext());}
@@ -252,6 +264,14 @@ espacio=[ \t \r \n]+
 
 /* Operador Suma */
 ( "+" ) {return new Symbol(sym.Suma, yychar, yyline, yytext());}
+
+/* CADENA 
+
+{L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}
+
+*/
+
+
 
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}

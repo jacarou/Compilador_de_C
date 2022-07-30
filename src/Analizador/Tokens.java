@@ -13,11 +13,11 @@ public enum Tokens {
     Break,
     Byte,
     
-    Cadena,
     Case,
     Char,
     Cin,
     Coma,
+    Comilla_simple,
     Comillas,
     ComparadorIgual,
     Const,
@@ -82,17 +82,22 @@ public enum Tokens {
     Parent_a,
     Parent_c,
     P_coma,
+    Printf,
     Punto,
     
     Register,
     Resta,
     Return,
     
+    Scanf,
     Short,
     Suma,
     Std,
+    _String,
     Struct,
     Switch,
+    
+    STRING_LITERAL,
     
     Typedef,
     True,

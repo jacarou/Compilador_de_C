@@ -18,16 +18,28 @@ espacio=[ \t \r]+
 ( "break" ) {lexemas=yytext(); return Break;}
 
 /* Tipo de dato String */
-( string ) {lexemas=yytext(); return Cadena;}
+( string ) {lexemas=yytext(); return _String;}
 
 /* Marcador de casos*/
 ( "case" ) {lexemas=yytext(); return Case;}
 
+/* Printf */
+( "printf" ) {lexemas=yytext(); return Printf;}
+
+/* Scanf */
+( "scanf" ) {lexemas=yytext(); return Scanf;}
+
 /* Comentarios */
 ( "//"(.)* | "/"(.)* ) {/*Ignore*/}
 
+/* Cadena - texto entre comillas*/
+L?\"(\\.|[^\\\"])*\" {lexemas=yytext(); return STRING_LITERAL;}
+
 /* Comillas */
 ( "\"") {lexemas=yytext(); return Comillas;}
+
+/* Comilla simple*/
+( "'") {lexemas=yytext(); return Comilla_simple;}
 
 /* Marcador de constante*/
 ( "const" ) {lexemas=yytext(); return Const;}
