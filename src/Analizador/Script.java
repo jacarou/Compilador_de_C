@@ -49,6 +49,7 @@ public class Script {
     
     public boolean intermedio(){
         String script = "cpp "+programaCppPath+ " > "+ programaIPath;
+        //String script = "cpp Programa.cpp > Programa.i";
         return bat(script);
     }
     
@@ -58,17 +59,19 @@ public class Script {
         return bat(script);
     }
     
-    public void objeto(){
+    public boolean objeto(){
         String script = "as Programa.s -o Programa.o";
         //String script = "as -Wall -S " + ProgramaIPath;
-        //return bat(script);
+        return bat(script);
     }
     
-    public void ejecutable(){
+    public boolean ejecutable(){
         String script = "gcc Programa.o -o Programa";
+        return bat(script);
     }
     
-    public void start(){
+    public boolean start(){
         String script = "start Programa";
+        return bat(script);
     }
 }

@@ -117,10 +117,25 @@ public class FrmAnalizador extends javax.swing.JFrame {
         });
 
         jBObjeto.setText("Objeto");
+        jBObjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBObjetoActionPerformed(evt);
+            }
+        });
 
         jBEjecutable.setText("Ejecutable");
+        jBEjecutable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEjecutableActionPerformed(evt);
+            }
+        });
 
         jBEjecutar.setText("Ejecutar");
+        jBEjecutar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEjecutarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -529,6 +544,18 @@ public class FrmAnalizador extends javax.swing.JFrame {
     private void jBAssemblerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAssemblerActionPerformed
         script.assambler();
     }//GEN-LAST:event_jBAssemblerActionPerformed
+
+    private void jBObjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBObjetoActionPerformed
+        script.objeto();
+    }//GEN-LAST:event_jBObjetoActionPerformed
+
+    private void jBEjecutableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEjecutableActionPerformed
+        script.ejecutable();
+    }//GEN-LAST:event_jBEjecutableActionPerformed
+
+    private void jBEjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEjecutarActionPerformed
+        script.start();
+    }//GEN-LAST:event_jBEjecutarActionPerformed
 
     public static void main(String args[]) throws Exception {
         

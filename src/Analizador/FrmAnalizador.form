@@ -252,16 +252,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Objeto"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBObjetoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEjecutable">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ejecutable"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEjecutableActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEjecutar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ejecutar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEjecutarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
