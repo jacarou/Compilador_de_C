@@ -21,10 +21,10 @@ terminal Bool, BitAnd, BitOr, Break, Byte, Case, Char, Cin, Coma, Comilla_simple
     ERROR, Et, False, Float, For, Identificador, If, Igual, Int, Include, Incremento, Iostream, Linea,
     Llave_a, Llave_c, Long, Main, MasIgual, MenosIgual, MayorQue, MenorQue, MayorIgual, MenorIgual,
     Modulo, ModuloIgual, Multiplicacion, MultiplicacionIgual, Namespace, Negador, Numero, Numeral,    
-    O_logico, Parent_a, Parent_c, P_coma, Printf, Punto, Register, Resta, Return, Scanf, Short, Suma,
+    O_logico, Parent_a, Parent_c, P_coma, Printf, Punto, Register, Resta, Return, Scanf, Short, Suma, _System,
     Std, _String, Struct, Switch, Typedef, True, Unsigned, Using, Void, While, Y_logico, STRING_LITERAL;
 
-non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR,
+non terminal INICIO, SENTENCIA, DECLARACION, IF, FOR, COMPLEMENTO,
     SENTENCIA_BOOLEANA_COMPUESTA, SENTENCIA_BOOLEANA_SIMPLE,
     OPERADORES_RELACIONALES, DECLARACION_ANIDADA, IMPORTACION,
     SENTENCIA_BOOLEANA_ANIDADA, FOR_PARTE_UNO, OPERACIONES_COMPLEMENTARIAS,
@@ -175,9 +175,10 @@ IF ::=
     If Parent_a SENTENCIA_BOOLEANA_ANIDADA Parent_c Llave_a SENTENCIA Llave_c Else IF
 ;
 FOR_PARTE_UNO::=
-    Int Identificador Igual Numero |
+    Int IDENTIFICADORES Igual Numero |
     IDENTIFICADORES |
-    IDENTIFICADORES Igual Numero 
+    IDENTIFICADORES Igual Numero |
+    Int IDENTIFICADORES Igual IDENTIFICADORES 
 ;
 IDENTIFICADORES::=
     Identificador |
@@ -205,7 +206,8 @@ OPERACIONES_COMPLEMENTARIAS::=
     IDENTIFICADORES Igual Numero |
     IDENTIFICADORES Igual Numero OPERADORES_ARITMETICOS IDENTIFICADORES |
     IDENTIFICADORES Igual IDENTIFICADORES OPERADORES_ARITMETICOS Numero |
-    IDENTIFICADORES Igual Numero OPERADORES_ARITMETICOS Numero
+    IDENTIFICADORES Igual Numero OPERADORES_ARITMETICOS Numero |
+    _System Parent_a STRING_LITERAL Parent_c 
 ;
 FOR::=
     For Parent_a FOR_PARTE_UNO P_coma SENTENCIA_BOOLEANA_ANIDADA P_coma OPERACIONES_COMPLEMENTARIAS Parent_c Llave_a SENTENCIA Llave_c
@@ -247,9 +249,13 @@ SWITCH::=
     Switch Parent_a IDENTIFICADORES Parent_c Llave_a CASE Llave_c
 ;
 PRINTF::=
-    Printf Parent_a STRING_LITERAL Coma Identificador Parent_c P_coma |
+    Printf Parent_a STRING_LITERAL Coma COMPLEMENTO Parent_c P_coma |
     Printf Parent_a STRING_LITERAL Parent_c P_coma
 ;
+COMPLEMENTO::=
+    Identificador |
+    Identificador Coma COMPLEMENTO
+;
 SCANF::=
-    Scanf Parent_a Identificador Parent_c P_coma
+    Scanf Parent_a STRING_LITERAL Coma BitAnd Identificador Parent_c P_coma
 ;

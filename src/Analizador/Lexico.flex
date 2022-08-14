@@ -17,6 +17,9 @@ espacio=[ \t \r]+
 /* Marcador break*/
 ( "break" ) {lexemas=yytext(); return Break;}
 
+/* Marcador system*/
+( "system" ) {lexemas=yytext(); return _System;}
+
 /* Tipo de dato String */
 ( string ) {lexemas=yytext(); return _String;}
 

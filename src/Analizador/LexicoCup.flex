@@ -25,6 +25,9 @@ espacio=[ \t \r \n]+
 /* Palabra reservada break*/
 ( break ) {return new Symbol(sym.Break, yychar, yyline, yytext());}
 
+/* Palabra reservada system*/
+( system ) {return new Symbol(sym._System, yychar, yyline, yytext());}
+
 /* Tipo de dato String */
 ( string ) {return new Symbol(sym._String, yychar, yyline, yytext());}
 

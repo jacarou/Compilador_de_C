@@ -1,827 +1,1301 @@
 # 1 "Programa.cpp"
 # 1 "<built-in>"
-# 1 "<command line>"
+# 1 "<command-line>"
 # 1 "Programa.cpp"
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 1 3
-# 47 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 3
-       
-# 48 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 3
 
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/mingw32/bits/c++config.h" 1 3
-# 35 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/mingw32/bits/c++config.h" 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/mingw32/bits/os_defines.h" 1 3
-# 36 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/mingw32/bits/c++config.h" 2 3
-# 57 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/mingw32/bits/c++config.h" 3
-namespace __gnu_debug_def { }
 
-namespace __gnu_debug
-{
-  using namespace __gnu_debug_def;
+
+
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 1 3
+# 9 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/crtdefs.h" 1 3
+# 10 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/crtdefs.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 1 3
+# 12 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
+# 46 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_mac.h" 3
+             
+# 55 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_mac.h" 3
+             
+# 13 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 2 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_secapi.h" 1 3
+# 47 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_secapi.h" 3
+extern "C++" {
+template <bool __test, typename __dsttype>
+  struct __if_array;
+template <typename __dsttype>
+  struct __if_array <true, __dsttype> {
+    typedef __dsttype __type;
+};
 }
-# 50 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 2 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstddef" 1 3
-# 46 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstddef" 3
-       
-# 47 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstddef" 3
+# 14 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 2 3
+# 282 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/vadefs.h" 1 3
+# 9 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/vadefs.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 1 3
+# 686 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
+# 687 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 2 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
+# 688 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 2 3
+# 10 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/vadefs.h" 2 3
 
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 1 3
 
+#pragma pack(push,_CRT_PACKING)
 
 
 
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 1 3 4
-# 151 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 213 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 7 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 2 3
-# 49 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstddef" 2 3
-
-namespace std
-{
-  using ::ptrdiff_t;
-  using ::size_t;
-}
-# 51 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 2 3
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 1 3
-# 15 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/_mingw.h" 1 3
-# 16 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 1 3
-
-
-
-
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 1 3 4
-# 7 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 2 3
-# 23 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 2 3
-# 61 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-extern "C" {
-# 72 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-extern int _argc;
-extern char** _argv;
-
-
-
-
-extern int* __attribute__((__cdecl__)) __p___argc(void);
-extern char*** __attribute__((__cdecl__)) __p___argv(void);
-extern wchar_t*** __attribute__((__cdecl__)) __p___wargv(void);
-# 113 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-   extern __attribute__ ((dllimport)) int __mb_cur_max;
-# 138 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
- int* __attribute__((__cdecl__)) _errno(void);
-
-
- int* __attribute__((__cdecl__)) __doserrno(void);
-# 150 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-  extern char *** __attribute__((__cdecl__)) __p__environ(void);
-  extern wchar_t *** __attribute__((__cdecl__)) __p__wenviron(void);
-# 173 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-  extern __attribute__ ((dllimport)) int _sys_nerr;
-# 197 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-extern __attribute__ ((dllimport)) char* _sys_errlist[];
-# 210 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-extern unsigned __attribute__((__cdecl__)) int* __p__osver(void);
-extern unsigned __attribute__((__cdecl__)) int* __p__winver(void);
-extern unsigned __attribute__((__cdecl__)) int* __p__winmajor(void);
-extern unsigned __attribute__((__cdecl__)) int* __p__winminor(void);
-
-
-
-
-
-
-
-extern __attribute__ ((dllimport)) unsigned int _osver;
-extern __attribute__ ((dllimport)) unsigned int _winver;
-extern __attribute__ ((dllimport)) unsigned int _winmajor;
-extern __attribute__ ((dllimport)) unsigned int _winminor;
-# 261 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
- char** __attribute__((__cdecl__)) __p__pgmptr(void);
-
- wchar_t** __attribute__((__cdecl__)) __p__wpgmptr(void);
-# 294 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-extern __attribute__ ((dllimport)) int _fmode;
-# 304 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
- double __attribute__((__cdecl__)) atof (const char*);
- int __attribute__((__cdecl__)) atoi (const char*);
- long __attribute__((__cdecl__)) atol (const char*);
-
- int __attribute__((__cdecl__)) _wtoi (const wchar_t *);
- long __attribute__((__cdecl__)) _wtol (const wchar_t *);
-
- double __attribute__((__cdecl__)) strtod (const char*, char**);
-
-inline float __attribute__((__cdecl__)) strtof (const char *nptr, char **endptr)
-  { return (strtod (nptr, endptr));}
-long double __attribute__((__cdecl__)) strtold (const char * __restrict__, char ** __restrict__);
-
-
- long __attribute__((__cdecl__)) strtol (const char*, char**, int);
- unsigned long __attribute__((__cdecl__)) strtoul (const char*, char**, int);
-
-
-
- double __attribute__((__cdecl__)) wcstod (const wchar_t*, wchar_t**);
-
-inline float __attribute__((__cdecl__)) wcstof( const wchar_t *nptr, wchar_t **endptr)
-{ return (wcstod(nptr, endptr)); }
-long double __attribute__((__cdecl__)) wcstold (const wchar_t * __restrict__, wchar_t ** __restrict__);
-
-
- long __attribute__((__cdecl__)) wcstol (const wchar_t*, wchar_t**, int);
- unsigned long __attribute__((__cdecl__)) wcstoul (const wchar_t*, wchar_t**, int);
-
-
-
- size_t __attribute__((__cdecl__)) wcstombs (char*, const wchar_t*, size_t);
- int __attribute__((__cdecl__)) wctomb (char*, wchar_t);
-
- int __attribute__((__cdecl__)) mblen (const char*, size_t);
- size_t __attribute__((__cdecl__)) mbstowcs (wchar_t*, const char*, size_t);
- int __attribute__((__cdecl__)) mbtowc (wchar_t*, const char*, size_t);
-
- int __attribute__((__cdecl__)) rand (void);
- void __attribute__((__cdecl__)) srand (unsigned int);
-
- void* __attribute__((__cdecl__)) calloc (size_t, size_t) __attribute__ ((__malloc__));
- void* __attribute__((__cdecl__)) malloc (size_t) __attribute__ ((__malloc__));
- void* __attribute__((__cdecl__)) realloc (void*, size_t);
- void __attribute__((__cdecl__)) free (void*);
-
- void __attribute__((__cdecl__)) abort (void) __attribute__ ((__noreturn__));
- void __attribute__((__cdecl__)) exit (int) __attribute__ ((__noreturn__));
-
-
-int __attribute__((__cdecl__)) atexit (void (*)(void));
-
- int __attribute__((__cdecl__)) system (const char*);
- char* __attribute__((__cdecl__)) getenv (const char*);
-
-
- void* __attribute__((__cdecl__)) bsearch (const void*, const void*, size_t, size_t,
-     int (*)(const void*, const void*));
- void __attribute__((__cdecl__)) qsort (void*, size_t, size_t,
-     int (*)(const void*, const void*));
-
- int __attribute__((__cdecl__)) abs (int) __attribute__ ((__const__));
- long __attribute__((__cdecl__)) labs (long) __attribute__ ((__const__));
-# 376 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-
- div_t __attribute__((__cdecl__)) div (int, int) __attribute__ ((__const__));
- ldiv_t __attribute__((__cdecl__)) ldiv (long, long) __attribute__ ((__const__));
-
-
-
-
-
-
-
- void __attribute__((__cdecl__)) _beep (unsigned int, unsigned int);
- void __attribute__((__cdecl__)) _seterrormode (int);
- void __attribute__((__cdecl__)) _sleep (unsigned long);
-
- void __attribute__((__cdecl__)) _exit (int) __attribute__ ((__noreturn__));
-
-
-
-typedef int (* _onexit_t)(void);
-_onexit_t __attribute__((__cdecl__)) _onexit( _onexit_t );
-
- int __attribute__((__cdecl__)) _putenv (const char*);
- void __attribute__((__cdecl__)) _searchenv (const char*, const char*, char*);
-
-
- char* __attribute__((__cdecl__)) _ecvt (double, int, int*, int*);
- char* __attribute__((__cdecl__)) _fcvt (double, int, int*, int*);
- char* __attribute__((__cdecl__)) _gcvt (double, int, char*);
-
- void __attribute__((__cdecl__)) _makepath (char*, const char*, const char*, const char*, const char*);
- void __attribute__((__cdecl__)) _splitpath (const char*, char*, char*, char*, char*);
- char* __attribute__((__cdecl__)) _fullpath (char*, const char*, size_t);
-
- char* __attribute__((__cdecl__)) _itoa (int, char*, int);
- char* __attribute__((__cdecl__)) _ltoa (long, char*, int);
- char* __attribute__((__cdecl__)) _ultoa(unsigned long, char*, int);
- wchar_t* __attribute__((__cdecl__)) _itow (int, wchar_t*, int);
- wchar_t* __attribute__((__cdecl__)) _ltow (long, wchar_t*, int);
- wchar_t* __attribute__((__cdecl__)) _ultow (unsigned long, wchar_t*, int);
-
-
- long long __attribute__((__cdecl__)) _atoi64(const char *);
- char* __attribute__((__cdecl__)) _i64toa(long long, char *, int);
- char* __attribute__((__cdecl__)) _ui64toa(unsigned long long, char *, int);
- long long __attribute__((__cdecl__)) _wtoi64(const wchar_t *);
- wchar_t* __attribute__((__cdecl__)) _i64tow(long long, wchar_t *, int);
- wchar_t* __attribute__((__cdecl__)) _ui64tow(unsigned long long, wchar_t *, int);
-
- wchar_t* __attribute__((__cdecl__)) _wgetenv(const wchar_t*);
- int __attribute__((__cdecl__)) _wputenv(const wchar_t*);
- void __attribute__((__cdecl__)) _wsearchenv(const wchar_t*, const wchar_t*, wchar_t*);
- void __attribute__((__cdecl__)) _wmakepath(wchar_t*, const wchar_t*, const wchar_t*, const wchar_t*, const wchar_t*);
- void __attribute__((__cdecl__)) _wsplitpath (const wchar_t*, wchar_t*, wchar_t*, wchar_t*, wchar_t*);
- wchar_t* __attribute__((__cdecl__)) _wfullpath (wchar_t*, const wchar_t*, size_t);
-
- unsigned int __attribute__((__cdecl__)) _rotl(unsigned int, int) __attribute__ ((__const__));
- unsigned int __attribute__((__cdecl__)) _rotr(unsigned int, int) __attribute__ ((__const__));
- unsigned long __attribute__((__cdecl__)) _lrotl(unsigned long, int) __attribute__ ((__const__));
- unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long, int) __attribute__ ((__const__));
-
-
-
-
- int __attribute__((__cdecl__)) putenv (const char*);
- void __attribute__((__cdecl__)) searchenv (const char*, const char*, char*);
-
- char* __attribute__((__cdecl__)) itoa (int, char*, int);
- char* __attribute__((__cdecl__)) ltoa (long, char*, int);
-
-
- char* __attribute__((__cdecl__)) ecvt (double, int, int*, int*);
- char* __attribute__((__cdecl__)) fcvt (double, int, int*, int*);
- char* __attribute__((__cdecl__)) gcvt (double, int, char*);
-# 461 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-void __attribute__((__cdecl__)) _Exit(int) __attribute__ ((__noreturn__));
-
-inline void __attribute__((__cdecl__)) _Exit(int status)
- { _exit(status); }
-
-
-typedef struct { long long quot, rem; } lldiv_t;
-
-lldiv_t __attribute__((__cdecl__)) lldiv (long long, long long) __attribute__ ((__const__));
-
-inline long long __attribute__((__cdecl__)) llabs(long long _j)
-  {return (_j >= 0 ? _j : -_j);}
-
-long long __attribute__((__cdecl__)) strtoll (const char* __restrict__, char** __restrict, int);
-unsigned long long __attribute__((__cdecl__)) strtoull (const char* __restrict__, char** __restrict__, int);
-
-
-long long __attribute__((__cdecl__)) atoll (const char *);
-
-
-long long __attribute__((__cdecl__)) wtoll (const wchar_t *);
-char* __attribute__((__cdecl__)) lltoa (long long, char *, int);
-char* __attribute__((__cdecl__)) ulltoa (unsigned long long , char *, int);
-wchar_t* __attribute__((__cdecl__)) lltow (long long, wchar_t *, int);
-wchar_t* __attribute__((__cdecl__)) ulltow (unsigned long long, wchar_t *, int);
-
-
-inline long long __attribute__((__cdecl__)) atoll (const char * _c)
- { return _atoi64 (_c); }
-inline char* __attribute__((__cdecl__)) lltoa (long long _n, char * _c, int _i)
- { return _i64toa (_n, _c, _i); }
-inline char* __attribute__((__cdecl__)) ulltoa (unsigned long long _n, char * _c, int _i)
- { return _ui64toa (_n, _c, _i); }
-inline long long __attribute__((__cdecl__)) wtoll (const wchar_t * _w)
-  { return _wtoi64 (_w); }
-inline wchar_t* __attribute__((__cdecl__)) lltow (long long _n, wchar_t * _w, int _i)
- { return _i64tow (_n, _w, _i); }
-inline wchar_t* __attribute__((__cdecl__)) ulltow (unsigned long long _n, wchar_t * _w, int _i)
- { return _ui64tow (_n, _w, _i); }
-# 508 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h" 3
-}
-# 53 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 2 3
-# 84 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 3
-namespace std
-{
-  using ::div_t;
-  using ::ldiv_t;
-
-  using ::abort;
-  using ::abs;
-  using ::atexit;
-  using ::atof;
-  using ::atoi;
-  using ::atol;
-  using ::bsearch;
-  using ::calloc;
-  using ::div;
-  using ::exit;
-  using ::free;
-  using ::getenv;
-  using ::labs;
-  using ::ldiv;
-  using ::malloc;
-
-  using ::mblen;
-  using ::mbstowcs;
-  using ::mbtowc;
-
-  using ::qsort;
-  using ::rand;
-  using ::realloc;
-  using ::srand;
-  using ::strtod;
-  using ::strtol;
-  using ::strtoul;
-  using ::system;
-
-
-
-
-
-  inline long
-  abs(long __i) { return labs(__i); }
-
-  inline ldiv_t
-  div(long __i, long __j) { return ldiv(__i, __j); }
-}
-# 140 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 3
-namespace __gnu_cxx
-{
-
-  using ::lldiv_t;
-
-
-
-
-
-  using ::_Exit;
-
-
-  inline long long
-  abs(long long __x) { return __x >= 0 ? __x : -__x; }
-
-  inline long long
-  llabs(long long __x) { return __x >= 0 ? __x : -__x; }
-
-
-  inline lldiv_t
-  div(long long __n, long long __d)
-  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
-
-  inline lldiv_t
-  lldiv(long long __n, long long __d)
-  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
-# 176 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/c++/3.4.2/cstdlib" 3
-  using ::atoll;
-  using ::strtoll;
-  using ::strtoull;
-
-  using ::strtof;
-  using ::strtold;
-}
-
-namespace std
-{
-
-  using __gnu_cxx::lldiv_t;
-
-  using __gnu_cxx::_Exit;
-  using __gnu_cxx::abs;
-  using __gnu_cxx::llabs;
-
-  using __gnu_cxx::div;
-  using __gnu_cxx::lldiv;
-
-  using __gnu_cxx::atoll;
-  using __gnu_cxx::strtof;
-  using __gnu_cxx::strtoll;
-  using __gnu_cxx::strtoull;
-  using __gnu_cxx::strtold;
-}
-# 2 "Programa.cpp" 2
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 1 3
-# 26 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 1 3
-
-
-
-
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 1 3 4
-# 354 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 3 4
-typedef short unsigned int wint_t;
-# 7 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 2 3
-# 27 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 2 3
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdarg.h" 1 3
-
-
-
-
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stdarg.h" 1 3 4
-# 44 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 7 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdarg.h" 2 3
-# 29 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 2 3
-# 138 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
-typedef struct _iobuf
-{
- char* _ptr;
- int _cnt;
- char* _base;
- int _flag;
- int _file;
- int _charbuf;
- int _bufsiz;
- char* _tmpfname;
-} FILE;
-# 163 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
-extern __attribute__ ((dllimport)) FILE _iob[];
-# 172 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
 extern "C" {
 
 
 
 
 
- FILE* __attribute__((__cdecl__)) fopen (const char*, const char*);
- FILE* __attribute__((__cdecl__)) freopen (const char*, const char*, FILE*);
- int __attribute__((__cdecl__)) fflush (FILE*);
- int __attribute__((__cdecl__)) fclose (FILE*);
-
- int __attribute__((__cdecl__)) remove (const char*);
- int __attribute__((__cdecl__)) rename (const char*, const char*);
- FILE* __attribute__((__cdecl__)) tmpfile (void);
- char* __attribute__((__cdecl__)) tmpnam (char*);
-
-
- char* __attribute__((__cdecl__)) _tempnam (const char*, const char*);
- int __attribute__((__cdecl__)) _rmtmp(void);
-
-
- char* __attribute__((__cdecl__)) tempnam (const char*, const char*);
- int __attribute__((__cdecl__)) rmtmp(void);
-
-
-
- int __attribute__((__cdecl__)) setvbuf (FILE*, char*, int, size_t);
-
- void __attribute__((__cdecl__)) setbuf (FILE*, char*);
-
-
-
-
-
- int __attribute__((__cdecl__)) fprintf (FILE*, const char*, ...);
- int __attribute__((__cdecl__)) printf (const char*, ...);
- int __attribute__((__cdecl__)) sprintf (char*, const char*, ...);
- int __attribute__((__cdecl__)) _snprintf (char*, size_t, const char*, ...);
- int __attribute__((__cdecl__)) vfprintf (FILE*, const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) vprintf (const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) vsprintf (char*, const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) _vsnprintf (char*, size_t, const char*, __gnuc_va_list);
-
-
-int __attribute__((__cdecl__)) snprintf(char* s, size_t n, const char* format, ...);
-inline int __attribute__((__cdecl__))
-vsnprintf (char* s, size_t n, const char* format, __gnuc_va_list arg)
-  { return _vsnprintf ( s, n, format, arg); }
-int __attribute__((__cdecl__)) vscanf (const char * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) vfscanf (FILE * __restrict__, const char * __restrict__,
-       __gnuc_va_list);
-int __attribute__((__cdecl__)) vsscanf (const char * __restrict__,
-       const char * __restrict__, __gnuc_va_list);
+  typedef __builtin_va_list __gnuc_va_list;
 
 
 
 
 
 
- int __attribute__((__cdecl__)) fscanf (FILE*, const char*, ...);
- int __attribute__((__cdecl__)) scanf (const char*, ...);
- int __attribute__((__cdecl__)) sscanf (const char*, const char*, ...);
-
-
-
-
- int __attribute__((__cdecl__)) fgetc (FILE*);
- char* __attribute__((__cdecl__)) fgets (char*, int, FILE*);
- int __attribute__((__cdecl__)) fputc (int, FILE*);
- int __attribute__((__cdecl__)) fputs (const char*, FILE*);
- char* __attribute__((__cdecl__)) gets (char*);
- int __attribute__((__cdecl__)) puts (const char*);
- int __attribute__((__cdecl__)) ungetc (int, FILE*);
-
-
-
-
-
-
-
- int __attribute__((__cdecl__)) _filbuf (FILE*);
- int __attribute__((__cdecl__)) _flsbuf (int, FILE*);
-
-
-
-inline int __attribute__((__cdecl__)) getc (FILE* __F)
-{
-  return (--__F->_cnt >= 0)
-    ? (int) (unsigned char) *__F->_ptr++
-    : _filbuf (__F);
+  typedef __gnuc_va_list va_list;
+# 97 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/vadefs.h" 3
 }
 
-inline int __attribute__((__cdecl__)) putc (int __c, FILE* __F)
+
+
+#pragma pack(pop)
+# 283 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 2 3
+
+
+#pragma pack(push,_CRT_PACKING)
+# 377 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+__extension__ typedef unsigned long long size_t;
+# 387 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+__extension__ typedef long long ssize_t;
+# 399 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+__extension__ typedef long long intptr_t;
+# 412 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+__extension__ typedef unsigned long long uintptr_t;
+# 425 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+__extension__ typedef long long ptrdiff_t;
+# 443 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+typedef unsigned short wint_t;
+typedef unsigned short wctype_t;
+# 463 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+typedef int errno_t;
+
+
+
+
+typedef long __time32_t;
+
+
+
+
+__extension__ typedef long long __time64_t;
+
+
+
+
+
+
+
+typedef __time64_t time_t;
+# 651 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw.h" 3
+extern "C" {
+
+
+
+
+void __attribute__((__cdecl__)) __debugbreak(void);
+extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __debugbreak(void)
 {
-  return (--__F->_cnt >= 0)
-    ? (int) (unsigned char) (*__F->_ptr++ = (char)__c)
-    : _flsbuf (__c, __F);
+  __asm__ __volatile__("int {$}3":);
 }
 
-inline int __attribute__((__cdecl__)) getchar (void)
-{
-  return (--(&_iob[0])->_cnt >= 0)
-    ? (int) (unsigned char) *(&_iob[0])->_ptr++
-    : _filbuf ((&_iob[0]));
-}
 
-inline int __attribute__((__cdecl__)) putchar(int __c)
-{
-  return (--(&_iob[1])->_cnt >= 0)
-    ? (int) (unsigned char) (*(&_iob[1])->_ptr++ = (char)__c)
-    : _flsbuf (__c, (&_iob[1]));}
-# 297 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
- size_t __attribute__((__cdecl__)) fread (void*, size_t, size_t, FILE*);
- size_t __attribute__((__cdecl__)) fwrite (const void*, size_t, size_t, FILE*);
 
 
-
-
-
- int __attribute__((__cdecl__)) fseek (FILE*, long, int);
- long __attribute__((__cdecl__)) ftell (FILE*);
- void __attribute__((__cdecl__)) rewind (FILE*);
-# 330 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
-typedef long long fpos_t;
-
-
-
-
- int __attribute__((__cdecl__)) fgetpos (FILE*, fpos_t*);
- int __attribute__((__cdecl__)) fsetpos (FILE*, const fpos_t*);
-
-
-
-
-
- int __attribute__((__cdecl__)) feof (FILE*);
- int __attribute__((__cdecl__)) ferror (FILE*);
-
-
-inline int __attribute__((__cdecl__)) feof (FILE* __F)
-  { return __F->_flag & 0x0010; }
-inline int __attribute__((__cdecl__)) ferror (FILE* __F)
-  { return __F->_flag & 0x0020; }
-
-
-
-
-
- void __attribute__((__cdecl__)) clearerr (FILE*);
- void __attribute__((__cdecl__)) perror (const char*);
-
-
-
-
-
-
- FILE* __attribute__((__cdecl__)) _popen (const char*, const char*);
- int __attribute__((__cdecl__)) _pclose (FILE*);
-
-
- FILE* __attribute__((__cdecl__)) popen (const char*, const char*);
- int __attribute__((__cdecl__)) pclose (FILE*);
-
-
-
-
-
- int __attribute__((__cdecl__)) _flushall (void);
- int __attribute__((__cdecl__)) _fgetchar (void);
- int __attribute__((__cdecl__)) _fputchar (int);
- FILE* __attribute__((__cdecl__)) _fdopen (int, const char*);
- int __attribute__((__cdecl__)) _fileno (FILE*);
- int __attribute__((__cdecl__)) _fcloseall(void);
- FILE* __attribute__((__cdecl__)) _fsopen(const char*, const char*, int);
-
- int __attribute__((__cdecl__)) _getmaxstdio(void);
- int __attribute__((__cdecl__)) _setmaxstdio(int);
-
-
-
- int __attribute__((__cdecl__)) fgetchar (void);
- int __attribute__((__cdecl__)) fputchar (int);
- FILE* __attribute__((__cdecl__)) fdopen (int, const char*);
- int __attribute__((__cdecl__)) fileno (FILE*);
-# 399 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/types.h" 1 3
-# 21 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/types.h" 3
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 1 3
-
-
-
-
-
-# 1 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h" 1 3 4
-# 7 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h" 2 3
-# 22 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/types.h" 2 3
-
-
-
-
-
-typedef long time_t;
-
-
-
-
-typedef long long __time64_t;
-
-
-
-
-
-typedef long _off_t;
-
-
-typedef _off_t off_t;
-
-
-
-
-
-
-
-typedef unsigned int _dev_t;
-
-
-
-
-
-typedef _dev_t dev_t;
-
-
-
-
-
-
-typedef short _ino_t;
-
-
-typedef _ino_t ino_t;
-
-
-
-
-
-
-typedef int _pid_t;
-
-
-typedef _pid_t pid_t;
-
-
-
-
-
-
-typedef unsigned short _mode_t;
-
-
-typedef _mode_t mode_t;
-
-
-
-
-
-
-typedef int _sigset_t;
-
-
-typedef _sigset_t sigset_t;
-
-
-
-
-
-typedef long _ssize_t;
-
-
-typedef _ssize_t ssize_t;
-
-
-
-
-
-typedef long long fpos64_t;
-
-
-
-
-typedef long long off64_t;
-# 400 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 2 3
-inline FILE* __attribute__((__cdecl__)) fopen64 (const char* filename, const char* mode)
-{
-  return fopen (filename, mode);
-}
-
-int __attribute__((__cdecl__)) fseeko64 (FILE*, off64_t, int);
-
-
-
-
-
-
-inline off64_t __attribute__((__cdecl__)) ftello64 (FILE * stream)
-{
-  fpos_t pos;
-  if (fgetpos(stream, &pos))
-    return -1LL;
-  else
-   return ((off64_t) pos);
-}
-# 428 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
- int __attribute__((__cdecl__)) fwprintf (FILE*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) wprintf (const wchar_t*, ...);
- int __attribute__((__cdecl__)) swprintf (wchar_t*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) _snwprintf (wchar_t*, size_t, const wchar_t*, ...);
- int __attribute__((__cdecl__)) vfwprintf (FILE*, const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) vwprintf (const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) vswprintf (wchar_t*, const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) _vsnwprintf (wchar_t*, size_t, const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) fwscanf (FILE*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) wscanf (const wchar_t*, ...);
- int __attribute__((__cdecl__)) swscanf (const wchar_t*, const wchar_t*, ...);
- wint_t __attribute__((__cdecl__)) fgetwc (FILE*);
- wint_t __attribute__((__cdecl__)) fputwc (wchar_t, FILE*);
- wint_t __attribute__((__cdecl__)) ungetwc (wchar_t, FILE*);
-
-
- wchar_t* __attribute__((__cdecl__)) fgetws (wchar_t*, int, FILE*);
- int __attribute__((__cdecl__)) fputws (const wchar_t*, FILE*);
- wint_t __attribute__((__cdecl__)) getwc (FILE*);
- wint_t __attribute__((__cdecl__)) getwchar (void);
- wchar_t* __attribute__((__cdecl__)) _getws (wchar_t*);
- wint_t __attribute__((__cdecl__)) putwc (wint_t, FILE*);
- int __attribute__((__cdecl__)) _putws (const wchar_t*);
- wint_t __attribute__((__cdecl__)) putwchar (wint_t);
- FILE* __attribute__((__cdecl__)) _wfdopen(int, wchar_t *);
- FILE* __attribute__((__cdecl__)) _wfopen (const wchar_t*, const wchar_t*);
- FILE* __attribute__((__cdecl__)) _wfreopen (const wchar_t*, const wchar_t*, FILE*);
- FILE* __attribute__((__cdecl__)) _wfsopen (const wchar_t*, const wchar_t*, int);
- wchar_t* __attribute__((__cdecl__)) _wtmpnam (wchar_t*);
- wchar_t* __attribute__((__cdecl__)) _wtempnam (const wchar_t*, const wchar_t*);
- int __attribute__((__cdecl__)) _wrename (const wchar_t*, const wchar_t*);
- int __attribute__((__cdecl__)) _wremove (const wchar_t*);
- void __attribute__((__cdecl__)) _wperror (const wchar_t*);
- FILE* __attribute__((__cdecl__)) _wpopen (const wchar_t*, const wchar_t*);
-
-
-
-int __attribute__((__cdecl__)) snwprintf (wchar_t* s, size_t n, const wchar_t* format, ...);
-inline int __attribute__((__cdecl__))
-vsnwprintf (wchar_t* s, size_t n, const wchar_t* format, __gnuc_va_list arg)
-  { return _vsnwprintf ( s, n, format, arg);}
-int __attribute__((__cdecl__)) vwscanf (const wchar_t * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) vfwscanf (FILE * __restrict__,
-         const wchar_t * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) vswscanf (const wchar_t * __restrict__,
-         const wchar_t * __restrict__, __gnuc_va_list);
-# 482 "C:/Dev-Cpp/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h" 3
- FILE* __attribute__((__cdecl__)) wpopen (const wchar_t*, const wchar_t*);
-
-
-
-
-
-
- wint_t __attribute__((__cdecl__)) _fgetwchar (void);
- wint_t __attribute__((__cdecl__)) _fputwchar (wint_t);
- int __attribute__((__cdecl__)) _getw (FILE*);
- int __attribute__((__cdecl__)) _putw (int, FILE*);
-
-
- wint_t __attribute__((__cdecl__)) fgetwchar (void);
- wint_t __attribute__((__cdecl__)) fputwchar (wint_t);
- int __attribute__((__cdecl__)) getw (FILE*);
- int __attribute__((__cdecl__)) putw (int, FILE*);
-
-
-
+const char *__mingw_get_crt_info (void);
 
 
 }
-# 3 "Programa.cpp" 2
+
+
+
+#pragma pack(pop)
+# 11 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/crtdefs.h" 2 3
+# 26 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/crtdefs.h" 3
+typedef size_t rsize_t;
+# 153 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/crtdefs.h" 3
+struct threadlocaleinfostruct;
+struct threadmbcinfostruct;
+typedef struct threadlocaleinfostruct *pthreadlocinfo;
+typedef struct threadmbcinfostruct *pthreadmbcinfo;
+struct __lc_time_data;
+
+typedef struct localeinfo_struct {
+  pthreadlocinfo locinfo;
+  pthreadmbcinfo mbcinfo;
+} _locale_tstruct,*_locale_t;
+
+
+
+typedef struct tagLC_ID {
+  unsigned short wLanguage;
+  unsigned short wCountry;
+  unsigned short wCodePage;
+} LC_ID,*LPLC_ID;
+
+
+
+
+typedef struct threadlocaleinfostruct {
+  int refcount;
+  unsigned int lc_codepage;
+  unsigned int lc_collate_cp;
+  unsigned long lc_handle[6];
+  LC_ID lc_id[6];
+  struct {
+    char *locale;
+    wchar_t *wlocale;
+    int *refcount;
+    int *wrefcount;
+  } lc_category[6];
+  int lc_clike;
+  int mb_cur_max;
+  int *lconv_intl_refcount;
+  int *lconv_num_refcount;
+  int *lconv_mon_refcount;
+  struct lconv *lconv;
+  int *ctype1_refcount;
+  unsigned short *ctype1;
+  const unsigned short *pctype;
+  const unsigned char *pclmap;
+  const unsigned char *pcumap;
+  struct __lc_time_data *lc_time_curr;
+} threadlocinfo;
+# 10 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 2 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 1 3 4
+# 34 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 3 4
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/syslimits.h" 1 3 4
+
+
+
+
+
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 1 3 4
+# 168 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 3 4
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/limits.h" 1 3 4
+# 169 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 2 3 4
+# 8 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/syslimits.h" 2 3 4
+# 35 "C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed/limits.h" 2 3 4
+# 11 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 2 3
+
+
+
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 40 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  typedef int (__attribute__((__cdecl__)) *_onexit_t)(void);
+# 50 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  typedef struct _div_t {
+    int quot;
+    int rem;
+  } div_t;
+
+  typedef struct _ldiv_t {
+    long quot;
+    long rem;
+  } ldiv_t;
+
+
+
+
+
+#pragma pack(4)
+  typedef struct {
+    unsigned char ld[10];
+  } _LDOUBLE;
+#pragma pack()
+
+
+
+  typedef struct {
+    double x;
+  } _CRT_DOUBLE;
+
+  typedef struct {
+    float f;
+  } _CRT_FLOAT;
+
+       
+
+
+  typedef struct {
+    long double x;
+  } _LONGDOUBLE;
+
+       
+
+#pragma pack(4)
+  typedef struct {
+    unsigned char ld12[12];
+  } _LDBL12;
+#pragma pack()
+# 105 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern int * __imp___mb_cur_max;
+# 131 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  typedef void (__attribute__((__cdecl__)) *_purecall_handler)(void);
+
+  __attribute__ ((__dllimport__)) _purecall_handler __attribute__((__cdecl__)) _set_purecall_handler(_purecall_handler _Handler);
+  __attribute__ ((__dllimport__)) _purecall_handler __attribute__((__cdecl__)) _get_purecall_handler(void);
+
+  typedef void (__attribute__((__cdecl__)) *_invalid_parameter_handler)(const wchar_t *,const wchar_t *,const wchar_t *,unsigned int,uintptr_t);
+  __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _set_invalid_parameter_handler(_invalid_parameter_handler _Handler);
+  __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _get_invalid_parameter_handler(void);
+
+
+
+  __attribute__ ((__dllimport__)) extern int *__attribute__((__cdecl__)) _errno(void);
+
+  errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
+  errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
+
+  __attribute__ ((__dllimport__)) unsigned long *__attribute__((__cdecl__)) __doserrno(void);
+
+  errno_t __attribute__((__cdecl__)) _set_doserrno(unsigned long _Value);
+  errno_t __attribute__((__cdecl__)) _get_doserrno(unsigned long *_Value);
+
+
+
+
+  extern __attribute__ ((__dllimport__)) char *_sys_errlist[1];
+  extern __attribute__ ((__dllimport__)) int _sys_nerr;
+# 171 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern int * __imp___argc;
+
+
+
+
+
+
+
+  extern char *** __imp___argv;
+
+
+
+
+
+
+
+  extern wchar_t *** __imp___wargv;
+# 199 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern char *** __imp__environ;
+# 208 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern wchar_t *** __imp__wenviron;
+# 217 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern char ** __imp__pgmptr;
+# 226 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern wchar_t ** __imp__wpgmptr;
+
+
+
+  errno_t __attribute__((__cdecl__)) _get_pgmptr(char **_Value);
+  errno_t __attribute__((__cdecl__)) _get_wpgmptr(wchar_t **_Value);
+
+
+
+
+  extern int * __imp__fmode;
+
+
+
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_fmode(int _Mode);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_fmode(int *_PMode);
+
+
+
+
+
+  extern unsigned int * __imp__osplatform;
+# 256 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern unsigned int * __imp__osver;
+# 265 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern unsigned int * __imp__winver;
+# 274 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern unsigned int * __imp__winmajor;
+# 283 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  extern unsigned int * __imp__winminor;
+
+
+
+
+  errno_t __attribute__((__cdecl__)) _get_osplatform(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_osver(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winver(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winmajor(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winminor(unsigned int *_Value);
+
+
+
+
+  extern "C++" {
+    template <typename _CountofType,size_t _SizeOfArray> char (*__countof_helper( _CountofType (&_Array)[_SizeOfArray]))[_SizeOfArray];
+
+  }
+
+
+
+
+
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
+
+
+
+  void __attribute__((__cdecl__)) _Exit(int) __attribute__ ((__noreturn__));
+
+
+
+
+
+
+       
+
+  void __attribute__((__cdecl__)) __attribute__((noreturn)) abort(void);
+       
+
+
+
+  __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) _set_abort_behavior(unsigned int _Flags,unsigned int _Mask);
+
+
+
+  int __attribute__((__cdecl__)) abs(int _X);
+  long __attribute__((__cdecl__)) labs(long _X);
+
+
+  __extension__ long long __attribute__((__cdecl__)) _abs64(long long);
+
+  extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) long long __attribute__((__cdecl__)) _abs64(long long x) {
+    return __builtin_llabs(x);
+  }
+
+
+  int __attribute__((__cdecl__)) atexit(void (__attribute__((__cdecl__)) *)(void));
+
+
+  double __attribute__((__cdecl__)) atof(const char *_String);
+  double __attribute__((__cdecl__)) _atof_l(const char *_String,_locale_t _Locale);
+
+  int __attribute__((__cdecl__)) atoi(const char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoi_l(const char *_Str,_locale_t _Locale);
+  long __attribute__((__cdecl__)) atol(const char *_Str);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _atol_l(const char *_Str,_locale_t _Locale);
+
+
+  void *__attribute__((__cdecl__)) bsearch(const void *_Key,const void *_Base,size_t _NumOfElements,size_t _SizeOfElements,int (__attribute__((__cdecl__)) *_PtFuncCompare)(const void *,const void *));
+  void __attribute__((__cdecl__)) qsort(void *_Base,size_t _NumOfElements,size_t _SizeOfElements,int (__attribute__((__cdecl__)) *_PtFuncCompare)(const void *,const void *));
+
+  unsigned short __attribute__((__cdecl__)) _byteswap_ushort(unsigned short _Short);
+  unsigned long __attribute__((__cdecl__)) _byteswap_ulong (unsigned long _Long);
+  __extension__ unsigned long long __attribute__((__cdecl__)) _byteswap_uint64(unsigned long long _Int64);
+  div_t __attribute__((__cdecl__)) div(int _Numerator,int _Denominator);
+  char *__attribute__((__cdecl__)) getenv(const char *_VarName) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _itoa(int _Value,char *_Dest,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _i64toa(long long _Val,char *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ui64toa(unsigned long long _Val,char *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _atoi64(const char *_String);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _atoi64_l(const char *_String,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _strtoi64(const char *_String,char **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _strtoi64_l(const char *_String,char **_EndPtr,int _Radix,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long __attribute__((__cdecl__)) _strtoui64(const char *_String,char **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long __attribute__((__cdecl__)) _strtoui64_l(const char *_String,char **_EndPtr,int _Radix,_locale_t _Locale);
+  ldiv_t __attribute__((__cdecl__)) ldiv(long _Numerator,long _Denominator);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ltoa(long _Value,char *_Dest,int _Radix) ;
+  int __attribute__((__cdecl__)) mblen(const char *_Ch,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mblen_l(const char *_Ch,size_t _MaxCount,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen(const char *_Str);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen_l(const char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen(const char *_Str,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen_l(const char *_Str,size_t _MaxCount,_locale_t _Locale);
+  int __attribute__((__cdecl__)) mbtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mbtowc_l(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes,_locale_t _Locale);
+  size_t __attribute__((__cdecl__)) mbstowcs(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstowcs_l(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale);
+  int __attribute__((__cdecl__)) rand(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_error_mode(int _Mode);
+  void __attribute__((__cdecl__)) srand(unsigned int _Seed);
+# 404 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtod(const char * __restrict__ _Str,char ** __restrict__ _EndPtr);
+  float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char * __restrict__ nptr, char ** __restrict__ endptr);
+
+  long double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtold(const char * __restrict__ , char ** __restrict__ );
+
+
+  extern double __attribute__((__cdecl__)) __attribute__ ((__nothrow__))
+  __strtod (const char * __restrict__ , char ** __restrict__);
+
+
+
+
+  float __attribute__((__cdecl__)) __mingw_strtof (const char * __restrict__, char ** __restrict__);
+  double __attribute__((__cdecl__)) __mingw_strtod (const char * __restrict__, char ** __restrict__);
+  long double __attribute__((__cdecl__)) __mingw_strtold(const char * __restrict__, char ** __restrict__);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _strtod_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,_locale_t _Locale);
+  long __attribute__((__cdecl__)) strtol(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _strtol_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  unsigned long __attribute__((__cdecl__)) strtoul(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _strtoul_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+
+
+  int __attribute__((__cdecl__)) system(const char *_Command);
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ultoa(unsigned long _Value,char *_Dest,int _Radix) ;
+  int __attribute__((__cdecl__)) wctomb(char *_MbCh,wchar_t _WCh) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wctomb_l(char *_MbCh,wchar_t _WCh,_locale_t _Locale) ;
+  size_t __attribute__((__cdecl__)) wcstombs(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount) ;
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcstombs_l(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale) ;
+
+
+
+  void *__attribute__((__cdecl__)) calloc(size_t _NumOfElements,size_t _SizeOfElements);
+  void __attribute__((__cdecl__)) free(void *_Memory);
+  void *__attribute__((__cdecl__)) malloc(size_t _Size);
+  void *__attribute__((__cdecl__)) realloc(void *_Memory,size_t _NewSize);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _recalloc(void *_Memory,size_t _Count,size_t _Size);
+
+
+       
+       
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _aligned_free(void *_Memory);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_malloc(size_t _Size,size_t _Alignment);
+       
+       
+
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_malloc(size_t _Size,size_t _Alignment,size_t _Offset);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_realloc(void *_Memory,size_t _Size,size_t _Alignment);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_realloc(void *_Memory,size_t _Size,size_t _Alignment,size_t _Offset);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment,size_t _Offset);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _itow(int _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ltow(long _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ultow(unsigned long _Value,wchar_t *_Dest,int _Radix) ;
+
+  double __attribute__((__cdecl__)) __mingw_wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
+  float __attribute__((__cdecl__)) __mingw_wcstof(const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
+  long double __attribute__((__cdecl__)) __mingw_wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
+# 482 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  double __attribute__((__cdecl__)) wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
+  float __attribute__((__cdecl__)) wcstof(const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
+
+
+  long double __attribute__((__cdecl__)) wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wcstod_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,_locale_t _Locale);
+  long __attribute__((__cdecl__)) wcstol(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wcstol_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  unsigned long __attribute__((__cdecl__)) wcstoul(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _wcstoul_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wgetenv(const wchar_t *_VarName) ;
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wsystem(const wchar_t *_Command);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wtof(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wtof_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wtoi(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wtoi_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtol(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtol_l(const wchar_t *_Str,_locale_t _Locale);
+
+  __extension__ __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _i64tow(long long _Val,wchar_t *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ui64tow(unsigned long long _Val,wchar_t *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _wtoi64(const wchar_t *_Str);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _wtoi64_l(const wchar_t *_Str,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _wcstoi64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _wcstoi64_l(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long __attribute__((__cdecl__)) _wcstoui64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long __attribute__((__cdecl__)) _wcstoui64_l(const wchar_t *_Str ,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+
+
+
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fullpath(char *_FullPath,const char *_Path,size_t _SizeInBytes);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atodbl(_CRT_DOUBLE *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoldbl(_LDOUBLE *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoflt(_CRT_FLOAT *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atodbl_l(_CRT_DOUBLE *_Result,char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoldbl_l(_LDOUBLE *_Result,char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoflt_l(_CRT_FLOAT *_Result,char *_Str,_locale_t _Locale);
+       
+       
+
+
+
+  __extension__ unsigned long long __attribute__((__cdecl__)) _lrotl(unsigned long long _Val,int _Shift);
+  __extension__ unsigned long long __attribute__((__cdecl__)) _lrotr(unsigned long long _Val,int _Shift);
+
+
+
+
+       
+       
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _makepath(char *_Path,const char *_Drive,const char *_Dir,const char *_Filename,const char *_Ext);
+  _onexit_t __attribute__((__cdecl__)) _onexit(_onexit_t _Func);
+
+
+
+  void __attribute__((__cdecl__)) perror(const char *_ErrMsg);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putenv(const char *_EnvString);
+       
+       
+
+
+  __extension__ unsigned long long __attribute__((__cdecl__)) _rotl64(unsigned long long _Val,int _Shift);
+  __extension__ unsigned long long __attribute__((__cdecl__)) _rotr64(unsigned long long Value,int Shift);
+       
+       
+       
+       
+
+
+  unsigned int __attribute__((__cdecl__)) _rotr(unsigned int _Val,int _Shift);
+  unsigned int __attribute__((__cdecl__)) _rotl(unsigned int _Val,int _Shift);
+       
+       
+  __extension__ unsigned long long __attribute__((__cdecl__)) _rotr64(unsigned long long _Val,int _Shift);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _searchenv(const char *_Filename,const char *_EnvVar,char *_ResultPath) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _splitpath(const char *_FullPath,char *_Drive,char *_Dir,char *_Filename,char *_Ext) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _swab(char *_Buf1,char *_Buf2,int _SizeInBytes);
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wfullpath(wchar_t *_FullPath,const wchar_t *_Path,size_t _SizeInWords);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wmakepath(wchar_t *_ResultPath,const wchar_t *_Drive,const wchar_t *_Dir,const wchar_t *_Filename,const wchar_t *_Ext);
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wperror(const wchar_t *_ErrMsg);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wputenv(const wchar_t *_EnvString);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wsearchenv(const wchar_t *_Filename,const wchar_t *_EnvVar,wchar_t *_ResultPath) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wsplitpath(const wchar_t *_FullPath,wchar_t *_Drive,wchar_t *_Dir,wchar_t *_Filename,wchar_t *_Ext) ;
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _beep(unsigned _Frequency,unsigned _Duration) __attribute__ ((__deprecated__));
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _seterrormode(int _Mode) __attribute__ ((__deprecated__));
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _sleep(unsigned long _Duration) __attribute__ ((__deprecated__));
+# 607 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+  char *__attribute__((__cdecl__)) ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
+  char *__attribute__((__cdecl__)) fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
+  char *__attribute__((__cdecl__)) gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
+  char *__attribute__((__cdecl__)) itoa(int _Val,char *_DstBuf,int _Radix) ;
+  char *__attribute__((__cdecl__)) ltoa(long _Val,char *_DstBuf,int _Radix) ;
+  int __attribute__((__cdecl__)) putenv(const char *_EnvString) ;
+
+
+
+  void __attribute__((__cdecl__)) swab(char *_Buf1,char *_Buf2,int _SizeInBytes) ;
+
+
+  char *__attribute__((__cdecl__)) ultoa(unsigned long _Val,char *_Dstbuf,int _Radix) ;
+  _onexit_t __attribute__((__cdecl__)) onexit(_onexit_t _Func);
+
+
+
+
+
+  typedef struct { __extension__ long long quot, rem; } lldiv_t;
+
+  __extension__ lldiv_t __attribute__((__cdecl__)) lldiv(long long, long long);
+
+  __extension__ long long __attribute__((__cdecl__)) llabs(long long);
+
+
+
+
+  __extension__ long long __attribute__((__cdecl__)) strtoll(const char * __restrict__, char ** __restrict, int);
+  __extension__ unsigned long long __attribute__((__cdecl__)) strtoull(const char * __restrict__, char ** __restrict__, int);
+
+
+  __extension__ long long __attribute__((__cdecl__)) atoll (const char *);
+
+
+  __extension__ long long __attribute__((__cdecl__)) wtoll (const wchar_t *);
+  __extension__ char *__attribute__((__cdecl__)) lltoa (long long, char *, int);
+  __extension__ char *__attribute__((__cdecl__)) ulltoa (unsigned long long , char *, int);
+  __extension__ wchar_t *__attribute__((__cdecl__)) lltow (long long, wchar_t *, int);
+  __extension__ wchar_t *__attribute__((__cdecl__)) ulltow (unsigned long long, wchar_t *, int);
+# 662 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 3
+}
+
+
+#pragma pack(pop)
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h" 1 3
+# 9 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 1 3
+# 10 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h" 2 3
+# 668 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 2 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 1 3
+# 11 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 46 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+  typedef struct _heapinfo {
+    int *_pentry;
+    size_t _size;
+    int _useflag;
+  } _HEAPINFO;
+
+
+  extern unsigned int _amblksiz;
+# 65 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+       
+       
+# 97 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+       
+       
+
+
+
+
+void * __mingw_aligned_malloc (size_t _Size, size_t _Alignment);
+void __mingw_aligned_free (void *_Memory);
+void * __mingw_aligned_offset_realloc (void *_Memory, size_t _Size, size_t _Alignment, size_t _Offset);
+void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _resetstkoflw (void);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _set_malloc_crt_max_wait(unsigned long _NewValue);
+
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _expand(void *_Memory,size_t _NewSize);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _msize(void *_Memory);
+
+
+
+
+
+
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _get_sbh_threshold(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_sbh_threshold(size_t _NewValue);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_amblksiz(size_t _Value);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_amblksiz(size_t *_Value);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapadd(void *_Memory,size_t _Size);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapchk(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapmin(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapset(unsigned int _Fill);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapwalk(_HEAPINFO *_EntryInfo);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _heapused(size_t *_Used,size_t *_Commit);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _get_heap_handle(void);
+# 144 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+  static __inline void *_MarkAllocaS(void *_Ptr,unsigned int _Marker) {
+    if(_Ptr) {
+      *((unsigned int*)_Ptr) = _Marker;
+      _Ptr = (char*)_Ptr + 16;
+    }
+    return _Ptr;
+  }
+# 163 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+  static __inline void __attribute__((__cdecl__)) _freea(void *_Memory) {
+    unsigned int _Marker;
+    if(_Memory) {
+      _Memory = (char*)_Memory - 16;
+      _Marker = *(unsigned int *)_Memory;
+      if(_Marker==0xDDDD) {
+ free(_Memory);
+      }
+
+
+
+
+
+    }
+  }
+# 206 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/malloc.h" 3
+}
+
+
+#pragma pack(pop)
+# 669 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h" 2 3
+# 7 "Programa.cpp" 2
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 1 3
+# 11 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_print_push.h" 1 3
+# 12 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 2 3
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 26 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  struct _iobuf {
+    char *_ptr;
+    int _cnt;
+    char *_base;
+    int _flag;
+    int _file;
+    int _charbuf;
+    int _bufsiz;
+    char *_tmpfname;
+  };
+  typedef struct _iobuf FILE;
+# 80 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_off_t.h" 1 3
+
+
+
+
+  typedef long _off_t;
+
+  typedef long off32_t;
+
+
+
+
+
+  __extension__ typedef long long _off64_t;
+
+  __extension__ typedef long long off64_t;
+# 26 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_off_t.h" 3
+typedef off32_t off_t;
+# 81 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 2 3
+
+
+
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) __iob_func(void);
+# 103 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  __extension__ typedef long long fpos_t;
+# 139 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+extern
+  __attribute__((__format__ (gnu_scanf, 2, 3))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_sscanf(const char * __restrict__ _Src,const char * __restrict__ _Format,...);
+extern
+  __attribute__((__format__ (gnu_scanf, 2, 0))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vsscanf (const char * __restrict__ _Str,const char * __restrict__ Format,va_list argp);
+extern
+  __attribute__((__format__ (gnu_scanf, 1, 2))) __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_scanf(const char * __restrict__ _Format,...);
+extern
+  __attribute__((__format__ (gnu_scanf, 1, 0))) __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_vscanf(const char * __restrict__ Format, va_list argp);
+extern
+  __attribute__((__format__ (gnu_scanf, 2, 3))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_fscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,...);
+extern
+  __attribute__((__format__ (gnu_scanf, 2, 0))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vfscanf (FILE * __restrict__ fp, const char * __restrict__ Format,va_list argp);
+
+extern
+  __attribute__((__format__ (gnu_printf, 3, 0))) __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) __mingw_vsnprintf(char * __restrict__ _DstBuf,size_t _MaxCount,const char * __restrict__ _Format,
+                               va_list _ArgList);
+extern
+  __attribute__((__format__ (gnu_printf, 3, 4))) __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) __mingw_snprintf(char * __restrict__ s, size_t n, const char * __restrict__ format, ...);
+extern
+  __attribute__((__format__ (gnu_printf, 1, 2))) __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_printf(const char * __restrict__ , ... ) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 1, 0))) __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_vprintf (const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 3))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_fprintf (FILE * __restrict__ , const char * __restrict__ , ...) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 0))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vfprintf (FILE * __restrict__ , const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 3))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_sprintf (char * __restrict__ , const char * __restrict__ , ...) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 0))) __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vsprintf (char * __restrict__ , const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 3))) __attribute__((nonnull (1,2)))
+  int __attribute__((__cdecl__)) __mingw_asprintf(char ** __restrict__ , const char * __restrict__ , ...) __attribute__ ((__nothrow__));
+extern
+  __attribute__((__format__ (gnu_printf, 2, 0))) __attribute__((nonnull (1,2)))
+  int __attribute__((__cdecl__)) __mingw_vasprintf(char ** __restrict__ , const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
+# 377 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  int __attribute__((__cdecl__)) fprintf(FILE * __restrict__ _File,const char * __restrict__ _Format,...);
+  int __attribute__((__cdecl__)) printf(const char * __restrict__ _Format,...);
+  int __attribute__((__cdecl__)) sprintf(char * __restrict__ _Dest,const char * __restrict__ _Format,...) ;
+
+  int __attribute__((__cdecl__)) vfprintf(FILE * __restrict__ _File,const char * __restrict__ _Format,va_list _ArgList);
+  int __attribute__((__cdecl__)) vprintf(const char * __restrict__ _Format,va_list _ArgList);
+  int __attribute__((__cdecl__)) vsprintf(char * __restrict__ _Dest,const char * __restrict__ _Format,va_list _Args) ;
+
+  int __attribute__((__cdecl__)) fscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,...) ;
+  int __attribute__((__cdecl__)) scanf(const char * __restrict__ _Format,...) ;
+  int __attribute__((__cdecl__)) sscanf(const char * __restrict__ _Src,const char * __restrict__ _Format,...) ;
+
+
+
+
+
+  int __attribute__((__cdecl__)) __ms_vscanf(const char * __restrict__ Format, va_list argp);
+  int __attribute__((__cdecl__)) __ms_vfscanf (FILE * __restrict__ fp, const char * __restrict__ Format,va_list argp);
+  int __attribute__((__cdecl__)) __ms_vsscanf (const char * __restrict__ _Str,const char * __restrict__ Format,va_list argp);
+
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (2)))
+  int vfscanf (FILE *__stream, const char *__format, __builtin_va_list __local_argv)
+  {
+    return __ms_vfscanf (__stream, __format, __local_argv);
+  }
+
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (2)))
+  int vsscanf (const char * __restrict__ __source, const char * __restrict__ __format, __builtin_va_list __local_argv)
+  {
+    return __ms_vsscanf( __source, __format, __local_argv );
+  }
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (1)))
+  int vscanf(const char *__format, __builtin_va_list __local_argv)
+  {
+    return __ms_vscanf (__format, __local_argv);
+  }
+
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _filbuf(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _flsbuf(int _Ch,FILE *_File);
+
+
+
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _fsopen(const char *_Filename,const char *_Mode,int _ShFlag);
+
+  void __attribute__((__cdecl__)) clearerr(FILE *_File);
+  int __attribute__((__cdecl__)) fclose(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fcloseall(void);
+
+
+
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _fdopen(int _FileHandle,const char *_Mode);
+
+  int __attribute__((__cdecl__)) feof(FILE *_File);
+  int __attribute__((__cdecl__)) ferror(FILE *_File);
+  int __attribute__((__cdecl__)) fflush(FILE *_File);
+  int __attribute__((__cdecl__)) fgetc(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fgetchar(void);
+  int __attribute__((__cdecl__)) fgetpos(FILE * __restrict__ _File ,fpos_t * __restrict__ _Pos);
+  int __attribute__((__cdecl__)) fgetpos64(FILE * __restrict__ _File ,fpos_t * __restrict__ _Pos);
+  char *__attribute__((__cdecl__)) fgets(char * __restrict__ _Buf,int _MaxCount,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fileno(FILE *_File);
+
+
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _tempnam(const char *_DirName,const char *_FilePrefix);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _flushall(void);
+  FILE *__attribute__((__cdecl__)) fopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode) ;
+  FILE *fopen64(const char * __restrict__ filename,const char * __restrict__ mode);
+  int __attribute__((__cdecl__)) fputc(int _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fputchar(int _Ch);
+  int __attribute__((__cdecl__)) fputs(const char * __restrict__ _Str,FILE * __restrict__ _File);
+  size_t __attribute__((__cdecl__)) fread(void * __restrict__ _DstBuf,size_t _ElementSize,size_t _Count,FILE * __restrict__ _File);
+  FILE *__attribute__((__cdecl__)) freopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode,FILE * __restrict__ _File) ;
+  int __attribute__((__cdecl__)) fsetpos(FILE *_File,const fpos_t *_Pos);
+  int __attribute__((__cdecl__)) fsetpos64(FILE *_File,const fpos_t *_Pos);
+  int __attribute__((__cdecl__)) fseek(FILE *_File,long _Offset,int _Origin);
+
+
+
+  int fseeko64(FILE* stream, _off64_t offset, int whence);
+  int fseeko(FILE* stream, _off_t offset, int whence);
+# 472 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  long __attribute__((__cdecl__)) ftell(FILE *_File);
+
+  _off_t ftello(FILE * stream);
+  _off64_t ftello64(FILE * stream);
+# 484 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  __extension__ int __attribute__((__cdecl__)) _fseeki64(FILE *_File,long long _Offset,int _Origin);
+  __extension__ long long __attribute__((__cdecl__)) _ftelli64(FILE *_File);
+  size_t __attribute__((__cdecl__)) fwrite(const void * __restrict__ _Str,size_t _Size,size_t _Count,FILE * __restrict__ _File);
+  int __attribute__((__cdecl__)) getc(FILE *_File);
+  int __attribute__((__cdecl__)) getchar(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _getmaxstdio(void);
+  char *__attribute__((__cdecl__)) gets(char *_Buffer) ;
+  int __attribute__((__cdecl__)) _getw(FILE *_File);
+
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _pclose(FILE *_File);
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _popen(const char *_Command,const char *_Mode);
+
+
+
+
+  int __attribute__((__cdecl__)) putc(int _Ch,FILE *_File);
+  int __attribute__((__cdecl__)) putchar(int _Ch);
+  int __attribute__((__cdecl__)) puts(const char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putw(int _Word,FILE *_File);
+
+
+  int __attribute__((__cdecl__)) remove(const char *_Filename);
+  int __attribute__((__cdecl__)) rename(const char *_OldFilename,const char *_NewFilename);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _unlink(const char *_Filename);
+
+  int __attribute__((__cdecl__)) unlink(const char *_Filename) ;
+
+
+  void __attribute__((__cdecl__)) rewind(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _rmtmp(void);
+  void __attribute__((__cdecl__)) setbuf(FILE * __restrict__ _File,char * __restrict__ _Buffer) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _setmaxstdio(int _Max);
+  __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) _set_output_format(unsigned int _Format);
+  __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) _get_output_format(void);
+  int __attribute__((__cdecl__)) setvbuf(FILE * __restrict__ _File,char * __restrict__ _Buf,int _Mode,size_t _Size);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scprintf(const char * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snscanf(const char * __restrict__ _Src,size_t _MaxCount,const char * __restrict__ _Format,...) ;
+  FILE *__attribute__((__cdecl__)) tmpfile(void) ;
+  char *__attribute__((__cdecl__)) tmpnam(char *_Buffer);
+  int __attribute__((__cdecl__)) ungetc(int _Ch,FILE *_File);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,va_list _Args) ;
+
+
+
+
+       
+       
+
+
+  int __attribute__((__cdecl__)) __ms_vsnprintf(char * __restrict__ d,size_t n,const char * __restrict__ format,va_list arg)
+    ;
+
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (3)))
+  int vsnprintf (char * __restrict__ __stream, size_t __n, const char * __restrict__ __format, va_list __local_argv)
+  {
+    return __ms_vsnprintf (__stream, __n, __format, __local_argv);
+  }
+
+  int __attribute__((__cdecl__)) __ms_snprintf(char * __restrict__ s, size_t n, const char * __restrict__ format, ...);
+
+
+inline __attribute__((__cdecl__))
+__attribute__ ((__nonnull__ (3)))
+int snprintf (char * __restrict__ __stream, size_t __n, const char * __restrict__ __format, ...)
+{
+  register int __retval;
+  __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+  __retval = __ms_vsnprintf (__stream, __n, __format, __local_argv);
+  __builtin_va_end( __local_argv );
+  return __retval;
+}
+
+
+       
+       
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscprintf(const char * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_printf_count_output(int _Value);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _get_printf_count_output(void);
+
+
+
+
+                                                     __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_swscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,...);
+                                                     __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vswscanf (const wchar_t * __restrict__ _Str,const wchar_t * __restrict__ Format,va_list argp);
+                                                     __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_wscanf(const wchar_t * __restrict__ _Format,...);
+                                                     __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_vwscanf(const wchar_t * __restrict__ Format, va_list argp);
+                                                     __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
+                                                     __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vfwscanf (FILE * __restrict__ fp, const wchar_t * __restrict__ Format,va_list argp);
+
+                                                      __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_fwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
+                                                      __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_wprintf(const wchar_t * __restrict__ _Format,...);
+                                                     __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vfwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList);
+                                                     __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) __mingw_vwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+                                                      __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) __mingw_snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...);
+                                                      __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) __mingw_vsnwprintf (wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list);
+                                                      __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_swprintf(wchar_t * __restrict__ , const wchar_t * __restrict__ , ...);
+                                                      __attribute__ ((__nonnull__ (2)))
+  int __attribute__((__cdecl__)) __mingw_vswprintf(wchar_t * __restrict__ , const wchar_t * __restrict__ ,va_list);
+# 725 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  int __attribute__((__cdecl__)) fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...) ;
+  int __attribute__((__cdecl__)) swscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,...) ;
+  int __attribute__((__cdecl__)) wscanf(const wchar_t * __restrict__ _Format,...) ;
+
+  int __attribute__((__cdecl__)) __ms_vwscanf (const wchar_t * __restrict__ , va_list);
+  int __attribute__((__cdecl__)) __ms_vfwscanf (FILE * __restrict__ ,const wchar_t * __restrict__ ,va_list);
+  int __attribute__((__cdecl__)) __ms_vswscanf (const wchar_t * __restrict__ ,const wchar_t * __restrict__ ,va_list);
+
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (2)))
+  int vfwscanf (FILE *__stream, const wchar_t *__format, __builtin_va_list __local_argv)
+  {
+    return __ms_vfwscanf (__stream, __format, __local_argv);
+  }
+
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (2)))
+  int vswscanf (const wchar_t * __restrict__ __source, const wchar_t * __restrict__ __format, __builtin_va_list __local_argv)
+  {
+    return __ms_vswscanf( __source, __format, __local_argv );
+  }
+  inline __attribute__((__cdecl__))
+  __attribute__ ((__nonnull__ (1)))
+  int vwscanf(const wchar_t *__format, __builtin_va_list __local_argv)
+  {
+    return __ms_vwscanf (__format, __local_argv);
+  }
+
+
+
+  int __attribute__((__cdecl__)) fwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
+  int __attribute__((__cdecl__)) wprintf(const wchar_t * __restrict__ _Format,...);
+  int __attribute__((__cdecl__)) vfwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  int __attribute__((__cdecl__)) vwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+# 768 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
+
+
+  wint_t __attribute__((__cdecl__)) fgetwc(FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fgetwchar(void);
+  wint_t __attribute__((__cdecl__)) fputwc(wchar_t _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fputwchar(wchar_t _Ch);
+  wint_t __attribute__((__cdecl__)) getwc(FILE *_File);
+  wint_t __attribute__((__cdecl__)) getwchar(void);
+  wint_t __attribute__((__cdecl__)) putwc(wchar_t _Ch,FILE *_File);
+  wint_t __attribute__((__cdecl__)) putwchar(wchar_t _Ch);
+  wint_t __attribute__((__cdecl__)) ungetwc(wint_t _Ch,FILE *_File);
+  wchar_t *__attribute__((__cdecl__)) fgetws(wchar_t * __restrict__ _Dst,int _SizeInWords,FILE * __restrict__ _File);
+  int __attribute__((__cdecl__)) fputws(const wchar_t * __restrict__ _Str,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _getws(wchar_t *_String) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putws(const wchar_t *_Str);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scwprintf(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,va_list _Args) ;
+
+
+
+
+       
+       
+
+
+  int __attribute__((__cdecl__)) __ms_snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...);
+  int __attribute__((__cdecl__)) __ms_vsnwprintf (wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list);
+  inline __attribute__((__cdecl__))
+  int snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...)
+  {
+    int r;
+    va_list argp;
+    __builtin_va_start (argp, format);
+    r = _vsnwprintf (s, n, format, argp);
+    __builtin_va_end (argp);
+    return r;
+  }
+  inline __attribute__((__cdecl__))
+  int __attribute__((__cdecl__)) vsnwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, va_list arg)
+  {
+    return _vsnwprintf(s,n,format,arg);
+  }
+       
+       
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,va_list _Args);
+
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/swprintf.inl" 1 3
+# 21 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/swprintf.inl" 3
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+                                                      __attribute__ ((__nonnull__ (3)))
+int vswprintf (wchar_t *__stream, size_t __count, const wchar_t *__format, __builtin_va_list __local_argv)
+{
+  return vsnwprintf( __stream, __count, __format, __local_argv );
+}
+
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+                                                      __attribute__ ((__nonnull__ (3)))
+int swprintf (wchar_t *__stream, size_t __count, const wchar_t *__format, ...)
+{
+  register int __retval;
+  __builtin_va_list __local_argv;
+
+  __builtin_va_start( __local_argv, __format );
+  __retval = vswprintf( __stream, __count, __format, __local_argv );
+  __builtin_va_end( __local_argv );
+  return __retval;
+}
+
+
+
+extern "C++" {
+
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+                                                      __attribute__ ((__nonnull__ (2)))
+int vswprintf (wchar_t *__stream, const wchar_t *__format, __builtin_va_list __local_argv)
+{
+
+
+
+  return _vswprintf( __stream, __format, __local_argv );
+
+}
+
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+                                                      __attribute__ ((__nonnull__ (2)))
+int swprintf (wchar_t *__stream, const wchar_t *__format, ...)
+{
+  register int __retval;
+  __builtin_va_list __local_argv;
+
+  __builtin_va_start( __local_argv, __format );
+  __retval = vswprintf( __stream, __format, __local_argv );
+  __builtin_va_end( __local_argv );
+  return __retval;
+}
+
+}
+# 825 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 2 3
+# 834 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwscanf(const wchar_t * __restrict__ _Src,size_t _MaxCount,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfdopen(int _FileHandle ,const wchar_t *_Mode);
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfopen(const wchar_t * __restrict__ _Filename,const wchar_t *__restrict__ _Mode) ;
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfreopen(const wchar_t * __restrict__ _Filename,const wchar_t * __restrict__ _Mode,FILE * __restrict__ _OldFile) ;
+
+
+
+
+
+  __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wpopen(const wchar_t *_Command,const wchar_t *_Mode);
+
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wremove(const wchar_t *_Filename);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wtmpnam(wchar_t *_Buffer);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fgetwc_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fputwc_nolock(wchar_t _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _ungetwc_nolock(wint_t _Ch,FILE *_File);
+# 884 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _lock_file(FILE *_File);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _unlock_file(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fclose_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fflush_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _fread_nolock(void * __restrict__ _DstBuf,size_t _ElementSize,size_t _Count,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fseek_nolock(FILE *_File,long _Offset,int _Origin);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _ftell_nolock(FILE *_File);
+  __extension__ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fseeki64_nolock(FILE *_File,long long _Offset,int _Origin);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _ftelli64_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _fwrite_nolock(const void * __restrict__ _DstBuf,size_t _Size,size_t _Count,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _ungetc_nolock(int _Ch,FILE *_File);
+
+
+
+
+
+  char *__attribute__((__cdecl__)) tempnam(const char *_Directory,const char *_FilePrefix) ;
+  int __attribute__((__cdecl__)) fcloseall(void) ;
+  FILE *__attribute__((__cdecl__)) fdopen(int _FileHandle,const char *_Format) ;
+  int __attribute__((__cdecl__)) fgetchar(void) ;
+  int __attribute__((__cdecl__)) fileno(FILE *_File) ;
+  int __attribute__((__cdecl__)) flushall(void) ;
+  int __attribute__((__cdecl__)) fputchar(int _Ch) ;
+  int __attribute__((__cdecl__)) getw(FILE *_File) ;
+  int __attribute__((__cdecl__)) putw(int _Ch,FILE *_File) ;
+  int __attribute__((__cdecl__)) rmtmp(void) ;
+# 926 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+int __attribute__((__cdecl__)) __mingw_str_wide_utf8 (const wchar_t * const wptr, char **mbptr, size_t * buflen);
+# 940 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+int __attribute__((__cdecl__)) __mingw_str_utf8_wide (const char *const mbptr, wchar_t ** wptr, size_t * buflen);
+# 949 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 3
+void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
+
+
+
+
+}
+
+
+#pragma pack(pop)
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdio_s.h" 1 3
+# 9 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdio_s.h" 3
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 1 3
+# 10 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/sec_api/stdio_s.h" 2 3
+# 960 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 2 3
+
+# 1 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/_mingw_print_pop.h" 1 3
+# 962 "C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" 2 3
+# 8 "Programa.cpp" 2
 
 int main(){
- int a,b,c;
- printf("Hola mundo");
-
- system("pause");
+    int x = 10, y = 5;
+    printf("Ingrese un numero por favor : ");
+    scanf("%d", &x);
+ printf("Ingrese otro numero por favor: ");
+    scanf("%d", &y);
+    printf("\nSENTENCIA IF-ELSE : \n");
+    if(x > y){
+     printf("Numero 1 (%d) es mayor que Numero 2 (%d) \n\n",x,y);
+    }else{
+ printf("Numero 2 (%d) es mayor que Numero 1 (%d) \n\n",y,x);
+    }
+    system("pause");
+    system("cls");
+    printf("\nIngrese otro numero para probar el \"FOR\" por favor: ");
+    scanf("%d", &x);
+    int num = 1;
+   printf("\nSENTENCIA FOR : \n");
+   for(int i = x; i< x+10;i++){
+     printf("\n  Iteracion %d, numero: %d ",num,i);
+ ++num;
+    }
+    printf("\n");
+    system("pause");
+    return 0;
 }

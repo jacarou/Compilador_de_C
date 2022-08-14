@@ -36,7 +36,7 @@ public class Script {
         String bat = "";
         bat += "cmd /c start cmd.exe "; //abrir cmd
         bat += "/K \" cd " + projectPath + " && ";
-        bat += script + "" ;
+        bat += script + "&& exit" ;
         System.out.println(bat);
         try {
             Runtime.getRuntime().exec(bat);

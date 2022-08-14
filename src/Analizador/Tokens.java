@@ -93,6 +93,7 @@ public enum Tokens {
     Short,
     Suma,
     Std,
+    _System,
     _String,
     Struct,
     Switch,
