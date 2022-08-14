@@ -1,8 +1,12 @@
+#include <iostream>
+using namespace std;
+
 int main(){
+    int a;
     int x;
-    printf("Ingrese un numero: ");
-    scanf(x);
+    cout<<"Ingrese un numero: ";
+    cin>>x;
     x = x * 2;
-    printf("El doble de su numero es: %d",x);
+    cout<<"El doble de su numero es: "<<x;
     return 0;
 }

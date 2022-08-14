@@ -20,10 +20,10 @@ import javax.swing.JOptionPane;
 public class FrmAnalizador extends javax.swing.JFrame {
 
     private Script script;
-    
+
     public FrmAnalizador() {
         initComponents();
-        
+
         this.script = new Script("C:\\Program Files (x86)\\Embarcadero\\Dev-Cpp\\TDM-GCC-64\\bin\\");
         this.jBAgregarPath.setEnabled(false);
     }
@@ -281,7 +281,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
 
         String expr = (String) Resultado.getText();
         Lexico lexicos = new Lexico(new StringReader(expr));
-        String resultado = "NO. LINEA \t\tSIMBOLO\nLINEA "+cont+"\n";
+        String resultado = "NO. LINEA \t\tSIMBOLO\nLINEA " + cont + "\n";
         while (true) {
             Tokens token = lexicos.yylex();
             if (token == null) {
@@ -313,7 +313,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Double:
                     resultado += "  <Tipo de dato double>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Float:
                     resultado += "  <Tipo de dato float>\t" + lexicos.lexemas + "\n";
                     break;
@@ -337,7 +337,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Char:
                     resultado += "  <Tipo de dato char>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Incremento:
                     resultado += "  <Incremento>\t\t" + lexicos.lexemas + "\n";
                     break;
@@ -349,7 +349,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Endl:
                     resultado += "  <Salto de linea>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Return:
                     resultado += "  <Reservada return>\t" + lexicos.lexemas + "\n";
                     break;
@@ -379,11 +379,11 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case Y_logico:
                     resultado += "  <Operador y logico>\t" + lexicos.lexemas + "\n";
-                    break;                
+                    break;
                 case BitAnd:
                     resultado += "  <Operador bitand>\t" + lexicos.lexemas + "\n";
                     break;
-                
+
                 case Suma:
                     resultado += "  <Operador suma>\t" + lexicos.lexemas + "\n";
                     break;
@@ -461,7 +461,7 @@ public class FrmAnalizador extends javax.swing.JFrame {
                     break;
                 case While:
                     resultado += "  <Reservada while>\t" + lexicos.lexemas + "\n";
-                    break;    
+                    break;
                 case Cin:
                     resultado += "  <Entrada por consola>\t" + lexicos.lexemas + "\n";
                     break;
@@ -555,20 +555,30 @@ public class FrmAnalizador extends javax.swing.JFrame {
     }//GEN-LAST:event_Borrar2ActionPerformed
 
     private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
-        try {
-            int cont = 1;
-            JFileChooser escoger = new JFileChooser();
-            escoger.showOpenDialog(null);
-            File arc = new File(escoger.getSelectedFile().getAbsolutePath());
-            String ST = new String(Files.readAllBytes(arc.toPath()));
-            Resultado.setText(ST);
-        } catch (FileNotFoundException ex) {
-            //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
+        JFileChooser directory = new JFileChooser();
+        directory.setCurrentDirectory(new File("."));
+        directory.setDialogTitle("DIRECTORIO");
+        directory.setAcceptAllFileFilterUsed(false);
+
+        if (directory.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            try {
+
+                File arc = new File(directory.getSelectedFile().getAbsolutePath());
+                String ST = new String(Files.readAllBytes(arc.toPath()));
+                Resultado.setText(ST);
+            } catch (FileNotFoundException ex) {
+                //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                //Logger.getLogger(FrmAnalizador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            script.setPath(null);
+            jLPath.setText("Selecciones path");
         }
+
+
     }//GEN-LAST:event_btnArchivoActionPerformed
 
     private void BotonSintacticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSintacticoActionPerformed
@@ -612,14 +622,16 @@ public class FrmAnalizador extends javax.swing.JFrame {
 
     private void jBSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaveActionPerformed
         try {
-            
+
             JFileChooser escoger = new JFileChooser();
-            if(escoger.showDialog(null, "Guardar")==JFileChooser.APPROVE_OPTION){
+            escoger.setCurrentDirectory(new File("."));
+            if (escoger.showDialog(null, "Guardar") == JFileChooser.APPROVE_OPTION) {
                 File file = escoger.getSelectedFile();
-                if(file.getName().endsWith("cpp")){
+                
+                if (file.getName().endsWith("cpp")) {
                     String doc = Resultado.getText();
                     boolean successful = saveFile(file, doc);
-                    if(successful){
+                    if (successful) {
                         System.out.println("Archivo guardado con exito");
                     }
                 }
@@ -635,25 +647,25 @@ public class FrmAnalizador extends javax.swing.JFrame {
         directory.setDialogTitle("SELECCIONE EL PATH DE COMPILADOR DEVC++");
         directory.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         directory.setAcceptAllFileFilterUsed(false);
-        
-        if(directory.showOpenDialog(this)== JFileChooser.APPROVE_OPTION){
+
+        if (directory.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             File directorySelect = directory.getSelectedFile();
             String path = directorySelect.getAbsolutePath();
             script.setPath(path);
             jLPath.setText(path);
             jBAgregarPath.setEnabled(true);
-        }else{
+        } else {
             script.setPath(null);
             jLPath.setText("Selecciones path");
         }
-        
+
     }//GEN-LAST:event_jBPathActionPerformed
 
     private void jBAgregarPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregarPathActionPerformed
         script.addPath();
     }//GEN-LAST:event_jBAgregarPathActionPerformed
 
-    private boolean saveFile(File file, String doc){
+    private boolean saveFile(File file, String doc) {
         String message = null;
         try {
             FileOutputStream out = new FileOutputStream(file);
@@ -664,9 +676,9 @@ public class FrmAnalizador extends javax.swing.JFrame {
             return false;
         }
     }
-    
+
     public static void main(String args[]) throws Exception {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

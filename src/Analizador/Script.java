@@ -35,9 +35,8 @@ public class Script {
     private boolean bat(String script){
         String bat = "";
         bat += "cmd /c start cmd.exe "; //abrir cmd
-        bat += "/K \" cd ";
-        bat += compilerPath + " && ";
-        bat += script + " && exit" ;
+        bat += "/K \" cd " + projectPath;
+        bat += " && " + script + " && exit" ;
         System.out.println(bat);
         try {
             Runtime.getRuntime().exec(bat);
@@ -84,18 +83,18 @@ public class Script {
     }
     
     public boolean objeto(){
-        String script = "as Programa.s -o Programa.o";
+        String script = "as "+programaSPath+" -o "+programaOPath;
         //String script = "as -Wall -S " + ProgramaIPath;
         return bat(script);
     }
     
     public boolean ejecutable(){
-        String script = "gcc Programa.o -o Programa";
+        String script = "gcc " + programaOPath + " -o Programa.exe";
         return bat(script);
     }
     
     public boolean start(){
-        String script = "start Programa";
+        String script = "start "+programaPath;
         return bat(script);
     }
 }
