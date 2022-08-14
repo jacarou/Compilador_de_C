@@ -1,12 +1,9 @@
-#include <iostream>
-using namespace std;
-
+#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
 int main(){
-    int a;
-    int x;
-    cout<<"Ingrese un numero: ";
-    cin>>x;
-    x = x * 2;
-    cout<<"El doble de su numero es: "<<x;
-    return 0;
+	int a,b,c;
+	printf("Hola mundo");
+	
+	system("pause");
 }

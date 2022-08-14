@@ -35,8 +35,8 @@ public class Script {
     private boolean bat(String script){
         String bat = "";
         bat += "cmd /c start cmd.exe "; //abrir cmd
-        bat += "/K \" cd " + projectPath;
-        bat += " && " + script + " && exit" ;
+        bat += "/K \" cd " + projectPath + " && ";
+        bat += script + "" ;
         System.out.println(bat);
         try {
             Runtime.getRuntime().exec(bat);
@@ -71,14 +71,15 @@ public class Script {
     }
     
     public boolean intermedio(){
-        String script = "cpp "+programaCppPath+ " > "+ programaIPath;
+        String script = "cpp Programa.cpp > Programa.i";
+        //+programaCppPath+ " > "+ programaIPath;
         //String script = "cpp Programa.cpp > Programa.i";
         return bat(script);
     }
     
     public boolean assambler(){
-        //String script = "g++ -Wall -S Programa.i";
-        String script = "g++ -Wall -S "+programaIPath;
+        String script = "g++ -Wall -S Programa.i";
+        //String script = "g++ -Wall -S "+programaIPath;
         return bat(script);
     }
     

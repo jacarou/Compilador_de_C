@@ -25,7 +25,6 @@ public class FrmAnalizador extends javax.swing.JFrame {
         initComponents();
 
         this.script = new Script("C:\\Program Files (x86)\\Embarcadero\\Dev-Cpp\\TDM-GCC-64\\bin\\");
-        this.jBAgregarPath.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -49,9 +48,6 @@ public class FrmAnalizador extends javax.swing.JFrame {
         jBObjeto = new javax.swing.JButton();
         jBEjecutable = new javax.swing.JButton();
         jBEjecutar = new javax.swing.JButton();
-        jBPath = new javax.swing.JButton();
-        jLPath = new javax.swing.JLabel();
-        jBAgregarPath = new javax.swing.JButton();
         jBSave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -145,59 +141,29 @@ public class FrmAnalizador extends javax.swing.JFrame {
             }
         });
 
-        jBPath.setText("Path");
-        jBPath.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBPathActionPerformed(evt);
-            }
-        });
-
-        jLPath.setText("::/path");
-        jLPath.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLPath.setMaximumSize(new java.awt.Dimension(30, 16));
-
-        jBAgregarPath.setText("Agregar path");
-        jBAgregarPath.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBAgregarPathActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBPath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLPath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBAgregarPath, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jBIntermedio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jBIntermedio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBAssembler, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBAssembler)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBObjeto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBEjecutable, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBEjecutable)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBEjecutar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jBEjecutar)
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jBPath)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBAgregarPath)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jBEjecutar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBEjecutar, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
                     .addComponent(jBEjecutable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBObjeto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBIntermedio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -575,7 +541,6 @@ public class FrmAnalizador extends javax.swing.JFrame {
             }
         } else {
             script.setPath(null);
-            jLPath.setText("Selecciones path");
         }
 
 
@@ -641,30 +606,6 @@ public class FrmAnalizador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBSaveActionPerformed
 
-    private void jBPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPathActionPerformed
-        JFileChooser directory = new JFileChooser();
-        directory.setCurrentDirectory(new File("."));
-        directory.setDialogTitle("SELECCIONE EL PATH DE COMPILADOR DEVC++");
-        directory.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        directory.setAcceptAllFileFilterUsed(false);
-
-        if (directory.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            File directorySelect = directory.getSelectedFile();
-            String path = directorySelect.getAbsolutePath();
-            script.setPath(path);
-            jLPath.setText(path);
-            jBAgregarPath.setEnabled(true);
-        } else {
-            script.setPath(null);
-            jLPath.setText("Selecciones path");
-        }
-
-    }//GEN-LAST:event_jBPathActionPerformed
-
-    private void jBAgregarPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregarPathActionPerformed
-        script.addPath();
-    }//GEN-LAST:event_jBAgregarPathActionPerformed
-
     private boolean saveFile(File file, String doc) {
         String message = null;
         try {
@@ -712,15 +653,12 @@ public class FrmAnalizador extends javax.swing.JFrame {
     private javax.swing.JButton BotonSintactico;
     private javax.swing.JTextArea Resultado;
     private javax.swing.JButton btnArchivo;
-    private javax.swing.JButton jBAgregarPath;
     private javax.swing.JButton jBAssembler;
     private javax.swing.JButton jBEjecutable;
     private javax.swing.JButton jBEjecutar;
     private javax.swing.JButton jBIntermedio;
     private javax.swing.JButton jBObjeto;
-    private javax.swing.JButton jBPath;
     private javax.swing.JButton jBSave;
-    private javax.swing.JLabel jLPath;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
