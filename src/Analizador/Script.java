@@ -20,7 +20,8 @@ public class Script {
     private final String programaPath;
     private final String programaSPath;
     private final String projectPath;
-    
+    private String path;
+     
     public Script(String compilerPath){
         this.compilerPath = compilerPath;
         this.projectPath = new File ("src/Archivos/").getAbsolutePath();
@@ -35,9 +36,32 @@ public class Script {
         String bat = "";
         bat += "cmd /c start cmd.exe "; //abrir cmd
         bat += "/K \" cd ";
-        bat += projectPath + " && adm.bat &&";
-        bat += "cd " + compilerPath + " && ";
-        bat += script ;
+        bat += compilerPath + " && ";
+        bat += script + " && exit" ;
+        System.out.println(bat);
+        try {
+            Runtime.getRuntime().exec(bat);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+    
+    public boolean addPath(){
+        if(this.path.equals("")||this.path == null){
+            return false;
+        }
+        String bat = "";
+        bat += "cmd /c start cmd.exe "; //abrir cmd
+        bat += "/K \" set path=%path%:"+this.path;
         System.out.println(bat);
         try {
             Runtime.getRuntime().exec(bat);
