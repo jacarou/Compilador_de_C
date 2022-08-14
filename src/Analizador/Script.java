@@ -60,7 +60,7 @@ public class Script {
         }
         String bat = "";
         bat += "cmd /c start cmd.exe "; //abrir cmd
-        bat += "/K \" set path=%path%:"+this.path;
+        bat += "/K \" set path=%path%;"+this.path+ " && exit";
         System.out.println(bat);
         try {
             Runtime.getRuntime().exec(bat);

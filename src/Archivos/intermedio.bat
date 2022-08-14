@@ -1,2 +1,2 @@
-cpp archivo.cpp > archivo.i
+cpp Programa.cpp > Programa.i
 exit

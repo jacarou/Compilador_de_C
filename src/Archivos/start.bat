@@ -1,2 +1,2 @@
-start archivo
+start Programa
 exit

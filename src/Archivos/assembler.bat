@@ -1,2 +1,2 @@
-g++ -Wall -S archivo.i
+g++ -Wall -S Programa.i
 exit

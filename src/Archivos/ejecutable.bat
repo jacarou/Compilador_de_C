@@ -1,2 +1,2 @@
-gcc archivo.o -o archivo
+gcc Programa.o -o Programa
 exit

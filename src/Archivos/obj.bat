@@ -1,2 +1,2 @@
-as archivo.s -o archivo.o
+as Programa.s -o Programa.o
 exit
